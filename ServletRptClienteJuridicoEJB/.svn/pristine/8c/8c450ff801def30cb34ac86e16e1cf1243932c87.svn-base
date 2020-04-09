@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="true" xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="FILE_EJB" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/logs/clienteJuridico/clienteJuridicoEJB.log" />
+		<param name="append" value="true" />
+		<param name="datePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %p %c{2} [%M] |%L| %m %n" />
+		</layout>
+	</appender>	
+
+	<appender name="FILESEGURIDAD_EJB" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="/logs/clienteJuridico/clienteJuridicoEJB_seguridad.log" />
+		<param name="append" value="true" />
+		<param name="datePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %p %c{2} [%M] |%L| %m %n" />
+		</layout>
+	</appender>
+	
+	
+
+	<appender name="CONSOLE_EJB" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %p %c{2} [%M] |%L| %m %n" />
+		</layout>
+	</appender>
+	
+	<logger name="ec.com.bancoInternacional">
+		<level value="INFO" />
+		<appender-ref ref="FILESEGURIDAD_EJB"/>		
+	</logger>
+	
+	<logger name="ec.com.bancoInternacional.view.controller">
+		<level value="DEBUG" />
+		<appender-ref ref="CONSOLE_EJB"/>		
+	</logger>
+				
+	<logger name="com.ibm.connector">
+		<level value="DEBUG" />
+		<appender-ref ref="CONSOLE_EJB" />
+		<appender-ref ref="FILE_EJB" />
+	</logger>	
+	
+	<root>
+		<level value="ALL" />
+		<appender-ref ref="FILE_EJB" />
+	</root>
+	
+
+</log4j:configuration>

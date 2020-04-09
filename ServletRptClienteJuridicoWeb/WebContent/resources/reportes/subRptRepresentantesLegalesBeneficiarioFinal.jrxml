@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2018-11-09T11:23:47 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subRptRepresentantesLegales" columnCount="2" printOrder="Horizontal" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="277" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="5" uuid="c19b0e4d-e3fa-499b-9982-3f533ca6ef1c">
+	<field name="countRepLegales" class="java.lang.Integer"/>
+	<field name="tipoIdentificacion" class="java.lang.String"/>
+	<field name="identificacion" class="java.lang.String"/>
+	<field name="nombres" class="java.lang.String"/>
+	<field name="cargo" class="java.lang.String"/>
+	<field name="vencimientoNombramiento" class="java.lang.String"/>
+	<field name="nacionalidad" class="java.lang.String"/>
+	<field name="fechaNacimiento" class="java.lang.String"/>
+	<field name="estadoCivil" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="celular" class="java.lang.String"/>
+	<field name="correo" class="java.lang.String"/>
+	<field name="identificacionConyugue" class="java.lang.String"/>
+	<field name="nombreConyugue" class="java.lang.String"/>
+	<field name="pais" class="java.lang.String"/>
+	<field name="canton" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="tipoCasa" class="java.lang.String"/>
+	<field name="tipoEdificio" class="java.lang.String"/>
+	<field name="calle" class="java.lang.String"/>
+	<field name="numero" class="java.lang.String"/>
+	<field name="calleSecundaria" class="java.lang.String"/>
+	<field name="piso" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="barrio" class="java.lang.String"/>
+	<field name="referencia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="73" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="8" width="236" height="15" uuid="0c8a4509-4808-41a9-af93-0e6017a7a5bf"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="25" width="236" height="15" uuid="bfb8c1e2-84b7-4c4a-b6c3-a84604a689a5"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cargo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="10" y="7" width="236" height="1" uuid="96548331-d1fb-4d1a-ae1f-ad0852a76642"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

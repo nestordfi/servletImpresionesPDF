@@ -1,0 +1,2529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2020-03-23T09:23:41 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repVinculacionPersonaJuridico" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7c790f63-0b16-4a85-b0e4-2313a8feef72">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="IMG_DIR" class="java.lang.String"/>
+	<parameter name="cabecera_nombre_banco" class="java.lang.String"/>
+	<parameter name="cabecera_nombres_cliente" class="java.lang.String"/>
+	<parameter name="cabecera_nombres_representante" class="java.lang.String"/>
+	<parameter name="cabecera_cargo_representante" class="java.lang.String"/>
+	<parameter name="identificacion_tipo_identificacion" class="java.lang.String"/>
+	<parameter name="identificacion_identificacion" class="java.lang.String"/>
+	<parameter name="identificacion_razon_social" class="java.lang.String"/>
+	<parameter name="infBasica_proposito" class="java.lang.String"/>
+	<parameter name="infBasica_razonSocial" class="java.lang.String"/>
+	<parameter name="infBasica_nombreComercial" class="java.lang.String"/>
+	<parameter name="infBasica_objetoSocial" class="java.lang.String"/>
+	<parameter name="infBasica_paisConstitucion" class="java.lang.String"/>
+	<parameter name="infBasica_fechaConstitucion" class="java.lang.String"/>
+	<parameter name="infBasica_duracion" class="java.math.BigDecimal"/>
+	<parameter name="infBasica_fechaVencimiento" class="java.lang.String"/>
+	<parameter name="infBasica_capitalSuscrito" class="java.math.BigDecimal"/>
+	<parameter name="infBasica_capitalSocial" class="java.math.BigDecimal"/>
+	<parameter name="infBasica_fechaInscripcion" class="java.lang.String"/>
+	<parameter name="infBasica_nroEmpleados" class="java.math.BigDecimal"/>
+	<parameter name="infBasica_codigoActEconomica" class="java.lang.String"/>
+	<parameter name="infBasica_actEconimicaNx" class="java.lang.String"/>
+	<parameter name="infBasica_clasificacion" class="java.lang.String"/>
+	<parameter name="infFinanciera_ingresosAnuales" class="java.math.BigDecimal"/>
+	<parameter name="infFinanciera_totalActivos" class="java.math.BigDecimal"/>
+	<parameter name="infFinanciera_totalPasivos" class="java.math.BigDecimal"/>
+	<parameter name="infFinanciera_patrimonio" class="java.math.BigDecimal"/>
+	<parameter name="fatca_representacionSi" class="java.lang.String"/>
+	<parameter name="fatca_representacionNo" class="java.lang.String"/>
+	<parameter name="fatca_porcentaje" class="java.math.BigDecimal"/>
+	<parameter name="fatcaparticipacionSi" class="java.lang.String"/>
+	<parameter name="fatcaparticipacionNo" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_pais" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_canton" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_provincia" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_parroquia" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_calle" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_nro" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_calleSecundaria" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_piso" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_departamento" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_barrio" class="java.lang.String"/>
+	<parameter name="infContacto_ubicacion_referencia" class="java.lang.String"/>
+	<parameter name="infContacto_tlfContacto_tlf1" class="java.lang.String"/>
+	<parameter name="infContacto_tlfContacto_tlf2" class="java.lang.String"/>
+	<parameter name="infContacto_tlfContacto_cell1" class="java.lang.String"/>
+	<parameter name="infContacto_tlfContacto_cell2" class="java.lang.String"/>
+	<parameter name="infContacto_tlfContacto_notificacionCell1" class="java.lang.String"/>
+	<parameter name="infContacto_tlfContacto_notificaionnCell2" class="java.lang.String"/>
+	<parameter name="infContacto_correo_correo1" class="java.lang.String"/>
+	<parameter name="infContacto_correo_correo2" class="java.lang.String"/>
+	<parameter name="infContacto_correo_notificaionCorreo1" class="java.lang.String"/>
+	<parameter name="infContacto_correo_notificaionCorreo2" class="java.lang.String"/>
+	<parameter name="infReferencia_contacto_nombre" class="java.lang.String"/>
+	<parameter name="infReferencia_contacto_cargo" class="java.lang.String"/>
+	<parameter name="infReferencia_contacto_telefono" class="java.lang.String"/>
+	<parameter name="infReferencia_contacto_celular" class="java.lang.String"/>
+	<parameter name="infReferencia_contacto_correo" class="java.lang.String"/>
+	<parameter name="infReferencia_clientes_nombre" class="java.lang.String"/>
+	<parameter name="infReferencia_clientes_canton" class="java.lang.String"/>
+	<parameter name="infReferencia_clientes_telefono" class="java.lang.String"/>
+	<parameter name="infReferencia_clientes_celular" class="java.lang.String"/>
+	<parameter name="infReferencia_proveedor_nombre" class="java.lang.String"/>
+	<parameter name="infReferencia_proveedor_canton" class="java.lang.String"/>
+	<parameter name="infReferencia_proveedor_telefono" class="java.lang.String"/>
+	<parameter name="infReferencia_proveedor_celular" class="java.lang.String"/>
+	<parameter name="infTranExterior_montoDepositoMensual" class="java.math.BigDecimal"/>
+	<parameter name="infTranExterior_montoRetiroMensual" class="java.math.BigDecimal"/>
+	<parameter name="infTranExterior_recibiraSi" class="java.lang.String"/>
+	<parameter name="infTranExterior_recibiraNo" class="java.lang.String"/>
+	<parameter name="infTranExterior_montoAnualRecibira" class="java.math.BigDecimal"/>
+	<parameter name="infTranExterior_paisOrigen" class="java.lang.String"/>
+	<parameter name="infTranExterior_enviaraSi" class="java.lang.String"/>
+	<parameter name="infTranExterior_enviaraNo" class="java.lang.String"/>
+	<parameter name="infTranExterior_montoAnualEnviara" class="java.math.BigDecimal"/>
+	<parameter name="infTranExterior_paisDestino" class="java.lang.String"/>
+	<parameter name="infAdicional_otroInstitucionSi" class="java.lang.String"/>
+	<parameter name="infAdicional_otroInstitucionNo" class="java.lang.String"/>
+	<parameter name="infAdicional_institucion" class="java.lang.String"/>
+	<parameter name="infAdicional_observaciones" class="java.lang.String"/>
+	<parameter name="textoCiudadSuscribeContrato" class="java.lang.String"/>
+	<parameter name="textoNroCelular" class="java.lang.String"/>
+	<parameter name="textoOprClaro" class="java.lang.String"/>
+	<parameter name="textoOprMovistar" class="java.lang.String"/>
+	<parameter name="textoOprCnt" class="java.lang.String"/>
+	<parameter name="textoCorreo" class="java.lang.String"/>
+	<parameter name="textoAutorizacion1Si" class="java.lang.String"/>
+	<parameter name="textoAutorizacion1No" class="java.lang.String"/>
+	<parameter name="textoAutorizacion2Si" class="java.lang.String"/>
+	<parameter name="textoAutorizacion2No" class="java.lang.String"/>
+	<parameter name="infBasica_fechaCreacionCliente" class="java.util.Date">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="infBasica_producto_vinculacion" class="java.lang.String"/>
+	<parameter name="infBasica_DeclaraImpuestosExterior" class="java.lang.String"/>
+	<parameter name="infContacto_correo_estadoCuenta1" class="java.lang.String"/>
+	<parameter name="infContacto_correo_estadoCuenta2" class="java.lang.String"/>
+	<field name="repLegalesList" class="java.util.List"/>
+	<field name="beneficiariosList" class="java.util.List"/>
+	<field name="accionistasList" class="java.util.List"/>
+	<field name="repLegalesListExcluyendoElPrimero" class="java.util.List"/>
+	<variable name="var_fecha" class="java.lang.String">
+		<variableExpression><![CDATA[$P{infBasica_fechaCreacionCliente} != null ? new SimpleDateFormat("EEEEE dd 'de' MMMMM 'de' yyyy", new Locale("es","ES")).format( $P{infBasica_fechaCreacionCliente}) : ""]]></variableExpression>
+		<initialValueExpression><![CDATA[$P{infBasica_fechaCreacionCliente} != null ? new SimpleDateFormat("EEEEE dd 'de' MMMMM 'de' yyyy", new Locale("es","ES")).format( $P{infBasica_fechaCreacionCliente}) : ""]]></initialValueExpression>
+	</variable>
+	<group name="GroupIdentificacion">
+		<groupHeader>
+			<band height="40">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="3" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="8540bd71-d844-4b64-95cf-5302c8530cec">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="3" y="0" width="308" height="18" forecolor="#FFFFFF" uuid="1c902548-910e-406d-b733-b87b4b76aaeb">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[IDENTIFICACIÓN]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="23" width="45" height="16" uuid="9ca34e6e-5c58-4298-b88a-2eba83ccfd34">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cliente:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="78" y="23" width="171" height="16" uuid="6f023f48-d755-475c-9e29-0b4490980a9a">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{identificacion_tipo_identificacion} != null && !"".equals($P{identificacion_tipo_identificacion}) ? $P{identificacion_tipo_identificacion} + " " : "") +$P{identificacion_identificacion}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="250" y="24" width="280" height="16" uuid="9d922f74-c4c0-4367-a23d-123ed675deb6">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{identificacion_razon_social}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInformacionBasica">
+		<groupHeader>
+			<band height="274">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="3" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="1fd71ef5-80a4-4030-accd-3df1badcc793"/>
+					<staticText>
+						<reportElement x="3" y="1" width="308" height="18" forecolor="#FFFFFF" uuid="7db90636-a6e0-41a7-ad28-070e15b1ebb2"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN BÁSICA]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="23" width="100" height="27" uuid="37da9de8-20b3-42ff-bfa5-3284bff95983">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Propósito de Relación Comercial:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="30" width="398" height="16" uuid="cc3837c2-4c35-41a0-87d1-4b7777b24595">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_proposito}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="50" width="100" height="27" uuid="1cc19488-0726-42e6-9b9c-331d194cbcc7">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Producto o Servicio de Vinculación:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="56" width="398" height="16" uuid="1dd9e2ee-9ba0-4ceb-9b22-1220ee3c9f71"/>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_producto_vinculacion}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="93" width="100" height="16" uuid="65b6a60d-2730-4e54-959a-5b703d63a738"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombre Comercial:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="93" width="398" height="16" uuid="68eb3e68-d566-457d-bff6-63b6df500a30">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_nombreComercial}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="109" width="100" height="16" uuid="a63947be-1053-470b-a07e-6ea8fc719b4a"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Objeto Social:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="109" width="398" height="32" uuid="c0b21a9d-b1bf-4487-a3db-1467b53575e4">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_objetoSocial}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="132" y="141" width="98" height="16" uuid="ff467660-519b-4516-8f9d-5d40855f90d7"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*País de Constitución]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="157" width="98" height="16" uuid="fe0d2c9a-f7c2-4946-94a5-3b37d485efa2"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_paisConstitucion}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="230" y="141" width="102" height="16" uuid="60eeaaba-9d2b-4223-b589-03c80a75e343"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Fecha de Constitución]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="232" y="157" width="98" height="16" uuid="ff11b8e5-bd10-4572-8ef7-d53c85e61056"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_fechaConstitucion}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="332" y="141" width="98" height="16" uuid="8e9fccbe-3cd0-4f11-8edb-69a71f90df78"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Duración (años)]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="332" y="157" width="98" height="16" uuid="7ddcc246-c8b0-4377-ae55-ccc6d023b915"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_duracion}.toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="430" y="141" width="100" height="16" uuid="834852c5-3bc1-448a-8a6a-762199ffd306"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Fecha de Vencimiento]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="430" y="157" width="100" height="16" uuid="bc7ed1ab-a781-4fdf-a350-7c64d80bbeea"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_fechaVencimiento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="132" y="173" width="98" height="16" uuid="fd829f2d-1154-4163-a783-027826f4e560"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Capital Suscrito]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="189" width="98" height="16" uuid="360c8416-2099-49ff-8e59-b08d0edc58b5"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_capitalSuscrito}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="232" y="189" width="98" height="16" uuid="6d9921d9-7604-46fa-bbe0-f22a1724847f"/>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_nroEmpleados}.toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="20" y="205" width="110" height="16" uuid="25467528-3fe7-40fe-8565-ab84a6be1559"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="6.5" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Código Actividad Económica:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="205" width="398" height="16" uuid="b669eb97-b121-407c-a0ca-1adf202e537c"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_codigoActEconomica}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="221" width="100" height="16" uuid="4a7962fd-f97e-4f29-9f11-02960c811ce1">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Actividad Económica:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="221" width="398" height="32" uuid="99b7f415-afdd-4936-abbb-f1e6ef2ab611">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $P{infBasica_actEconimicaNx}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="332" y="173" width="198" height="16" uuid="1e1aa6b4-b2e8-41c1-8234-b6f57ad93f2e"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[* Clasificación]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="332" y="189" width="198" height="16" uuid="68d70f49-dfde-4a1d-8fd7-52bf69bda250"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_clasificacion}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="232" y="173" width="98" height="16" uuid="3198613f-532d-43fd-b8a9-5a77a7c697f1">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Número de Empleados:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="77" width="100" height="16" uuid="8d244b00-c853-40df-b74f-376c31bf7380"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Razón Social:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="77" width="398" height="16" uuid="8d584d78-a516-4cd3-a316-623f6f7f8480"/>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_razonSocial}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="31" y="253" width="99" height="21" uuid="a736c3d3-793c-4f1e-a6cd-2523673eda3e">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[* Declara impuestos en el exterior:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="259" width="100" height="15" uuid="419fb2cf-73e8-41b7-a7b2-03b740f9b65c"/>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infBasica_DeclaraImpuestosExterior}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInformacionFinanciera">
+		<groupHeader>
+			<band height="83">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="3" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="5a993b17-564d-4e0e-827c-0a19807338f6"/>
+					<staticText>
+						<reportElement x="3" y="-1" width="308" height="18" forecolor="#FFFFFF" uuid="654a0f28-c4d3-440b-835a-559f4eb0fb4f"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN FINANCIERA]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="23" width="100" height="27" uuid="8eae06ef-1f47-4c55-9399-92eb508e5b04">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Ventas o Ingresos Anuales:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="28" width="398" height="16" uuid="5cb9de9d-30f7-4520-94b7-73cc8caa75d1">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infFinanciera_ingresosAnuales}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="50" width="100" height="19" uuid="9940d700-e909-4451-89b2-20ddf0e9ac7c">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Información Patrimonial:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="132" y="51" width="100" height="16" uuid="863fa5bd-1a98-4b70-a756-a030c13cb41e"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Total Activos (USD)]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="67" width="100" height="16" uuid="ed2eab64-87b9-4726-90cc-07cc2c7ad75e"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infFinanciera_totalActivos}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="232" y="51" width="100" height="16" uuid="71bf828f-962e-4c08-94a8-85ddf39e8292"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Total Pasivos (USD)]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="232" y="67" width="100" height="16" uuid="b045fc6f-e875-490f-8510-2ec548c2266b"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infFinanciera_totalPasivos}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="332" y="51" width="100" height="16" uuid="dc2642b2-f628-4521-b5ad-0b9549a589cd"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Patrimonio]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="332" y="67" width="100" height="16" uuid="0522ca0a-1232-4c63-a5f1-d13deee475c7"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infFinanciera_patrimonio}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupCuestionarioFatca">
+		<groupHeader>
+			<band height="76">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="3" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="131e6cf9-158b-4fe8-af85-71b9f80523e1">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="3" y="0" width="308" height="18" forecolor="#FFFFFF" uuid="e99b8aeb-33bd-4761-a65b-9e211c9b0a35"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[CUESTIONARIO FATCA]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="23" width="360" height="16" uuid="cb5b824b-17e2-49ce-84e2-6481c0587998">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[¿La empresa tiene alguna representación en los Estados Unidos?]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="442" y="23" width="15" height="16" uuid="cc8052ba-2ebc-4a01-a139-f4c79df5e05c">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fatca_representacionSi}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="458" y="23" width="20" height="16" uuid="3410cb0c-dd5f-479f-925d-efef812d6282">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Si]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="495" y="23" width="15" height="16" uuid="61bcff71-ff9f-4ad2-8fdf-17f6fbc098fc">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fatca_representacionNo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="511" y="23" width="20" height="16" uuid="b93b41d3-48c4-40be-93da-8c4c6c19c8d4">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="40" width="360" height="16" uuid="ddf14f4a-bb70-42aa-baef-e5f26d947f95">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[¿Qué porcentaje de sus ingresos provienen de su actividad económica principal?]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="443" y="40" width="88" height="16" uuid="80db6c56-5546-4d4f-bd66-efde4a9b5a6a">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fatca_porcentaje}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="56" width="410" height="20" uuid="cf1b3d06-35da-4fc8-ab4e-4b69105a120c">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Existe almenos un accionista, propietario o particiante estadounidense con una participación de acciones mayor o igual al 10%?]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="442" y="57" width="15" height="16" uuid="b60629c4-4c0d-432b-94da-935bb7e9a96a">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fatcaparticipacionSi}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="458" y="57" width="20" height="16" uuid="d09ca391-7987-463f-bab5-75d2a45744f2">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Si]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="495" y="57" width="15" height="16" uuid="1383b627-bb84-403a-8dbd-8e407c6324f9">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fatcaparticipacionNo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="511" y="57" width="20" height="16" uuid="789afab8-8c8c-400e-828b-28839e316b63">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[No]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInformacionContacto">
+		<groupHeader>
+			<band height="120">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="0" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="480e96cb-6db3-488d-a178-b4776901523d">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="3" y="-1" width="308" height="18" forecolor="#FFFFFF" uuid="9ba1f89a-950a-4c16-8c3e-5a68fc8fc780"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN DE CONTACTO]]></text>
+					</staticText>
+					<frame>
+						<reportElement mode="Opaque" x="0" y="21" width="500" height="16" forecolor="#B89F7D" backcolor="#FCC09D" uuid="4bbaeaf2-1c7f-4225-a89b-530446749387">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<staticText>
+							<reportElement x="3" y="-1" width="308" height="16" forecolor="#000000" uuid="c48700d0-c77d-4706-bb7b-59fcc1dbb46d"/>
+							<box>
+								<topPen lineColor="#000000"/>
+								<leftPen lineColor="#000000"/>
+								<bottomPen lineColor="#000000"/>
+								<rightPen lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="Arial" size="10" isBold="true"/>
+							</textElement>
+							<text><![CDATA[UBICACIÓN]]></text>
+						</staticText>
+					</frame>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="39" width="100" height="15" uuid="a6927e92-696c-4977-9d74-66fa8a8642dd"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Lugar:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="87" width="100" height="15" uuid="98d8cdce-bee2-491b-821b-94989215004e">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Barrio, Sector:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="132" y="39" width="398" height="15" uuid="6acfb9a9-beb8-4f17-bd27-be07985a8bd0">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_ubicacion_pais} + " " + $P{infContacto_ubicacion_canton} + " " + $P{infContacto_ubicacion_provincia} + " " + $P{infContacto_ubicacion_parroquia}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="461" y="55" width="69" height="15" uuid="307e6a1f-a753-43ed-a0cf-53928f47c9de"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_ubicacion_nro}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement x="132" y="71" width="178" height="15" uuid="f8adb2a4-b3cb-452b-accd-b083ab8ea09c">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_ubicacion_calleSecundaria}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="344" y="71" width="38" height="15" uuid="b04bed5c-3b50-4825-8d2b-1bfd3c53d6e7">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_ubicacion_piso}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="461" y="71" width="69" height="15" uuid="ecd33281-6c73-4858-a225-97011ed53e0f"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_ubicacion_departamento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="55" width="100" height="15" uuid="32cf7b86-fe84-41ec-93fa-56c69b87f3cf">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Calle principal:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="388" y="55" width="71" height="15" uuid="95f82abd-607f-48ae-8003-f7549835782d">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="false" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Número:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="71" width="100" height="15" uuid="44bb53a3-8133-4909-902c-053889b2458b"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Calle Secundaria:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="312" y="71" width="30" height="15" uuid="f6f8d13a-e67f-4a4b-8d01-9fc737a4f867"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="false" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Piso:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="388" y="71" width="71" height="15" uuid="b0dc3798-f8da-4070-829e-d6cec2baf73e"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="false" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Departamento:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement x="132" y="104" width="398" height="11" uuid="3acf0384-22fc-426c-b86c-4a174e7fcb74">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" "+ $P{infContacto_ubicacion_referencia}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="103" width="100" height="16" uuid="82d52c42-b3d3-4f30-b435-614b698c500d"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Referencia:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement x="132" y="55" width="178" height="15" uuid="95017acd-4495-42fa-9d05-7bb2043ec5e9">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_ubicacion_calle}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement x="132" y="87" width="398" height="15" uuid="650d3068-e926-4a37-9e80-e38ddc73e2d6">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_ubicacion_barrio}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInfConTelefonoContacto">
+		<groupHeader>
+			<band height="41">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<rectangle>
+					<reportElement x="460" y="25" width="15" height="15" uuid="395668f6-8648-48e5-94dd-7a81f7d63ca9"/>
+				</rectangle>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="-3" width="500" height="16" forecolor="#B89F7D" backcolor="#FCC09D" uuid="c89e9fe4-422d-4ddb-94c9-98ef3e912acb"/>
+					<staticText>
+						<reportElement x="3" y="-1" width="308" height="16" forecolor="#000000" uuid="bbb4a5a9-f7d4-45ac-abc2-e1aff834db18">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[TELÉFONOS DE CONTACTO]]></text>
+					</staticText>
+				</frame>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="132" y="25" width="100" height="16" uuid="8fb803be-d7ef-4d82-8db1-10b1ca3445c1">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_tlfContacto_tlf1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="25" width="100" height="16" uuid="ba3c90ed-b60b-42ce-8cd8-1254b90439d5">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Teléfono Fijo 1:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="25" width="41" height="16" uuid="6018a0dd-2d67-4211-b777-1a8938367ef5"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Celular 1:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="282" y="25" width="157" height="16" uuid="1d48beb4-c4c0-4b7f-aa28-eee49ced3a5c"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_tlfContacto_cell1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="420" y="14" width="110" height="10" uuid="8e2eb227-8b7c-4e56-b8cf-847dd1274830"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="false" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Celular para recibir Notificaciones]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="461" y="25" width="13" height="13" uuid="f2a21c7d-9308-401d-a1f4-d6c1be111a44"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_tlfContacto_notificacionCell1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInfConTelefonoContactoDos">
+		<groupHeader>
+			<band height="24">
+				<staticText>
+					<reportElement x="30" y="0" width="100" height="16" uuid="41602a4e-31a1-45d8-947e-b91045608096">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Teléfono Fijo 2:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="132" y="0" width="100" height="16" uuid="e7b8a640-386d-4a22-9b7a-497801cd5cab">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_tlfContacto_tlf2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="240" y="0" width="41" height="16" uuid="f374384d-cb64-429c-98c1-520f7933df58">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Celular 2:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="282" y="0" width="157" height="16" uuid="6990d856-99b2-4978-9ef3-dedebb30532a"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_tlfContacto_cell2}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="460" y="1" width="15" height="15" uuid="4e52b9f0-8ce1-4729-877d-335b954945f6"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="461" y="1" width="13" height="13" uuid="57ddb5d8-6048-46a5-a579-49dde3e0c041"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_tlfContacto_notificaionnCell2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInfConCorreosElectronicos">
+		<groupHeader>
+			<band height="60">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<rectangle>
+					<reportElement x="488" y="26" width="15" height="15" uuid="a28ac49d-2d83-4bc0-9900-edae60adb52f"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="488" y="43" width="15" height="15" uuid="0b8d99f8-10ba-4fb5-9e2f-3861b0ff62d8"/>
+				</rectangle>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="-3" width="500" height="16" forecolor="#B89F7D" backcolor="#FCC09D" uuid="28403bae-a312-49e1-addf-1f31edcf6b2b"/>
+					<staticText>
+						<reportElement x="3" y="-1" width="308" height="16" forecolor="#000000" uuid="619b02ae-63b1-4b10-a13e-f1b497403ce3"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[CORREOS ELECTRÓNICOS]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="464" y="13" width="66" height="12" uuid="b6351814-b1aa-4b94-bcf3-97fb87384ddc">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="5" isBold="false" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Correo para recibir Notificaciones]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="24" width="100" height="16" uuid="374daa67-fc3a-4153-b0e1-7be09f76f921">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Correo Electrónico 1]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="132" y="24" width="274" height="16" uuid="f4ec3f6d-76ef-49c4-a05f-e0ab53b190ae"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_correo_correo1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="41" width="100" height="16" uuid="5d1915af-6c21-48d4-a80b-ebf75270b083"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Correo Electrónico 2]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="132" y="41" width="274" height="16" uuid="d9164882-68ac-46b3-9cba-22913d14a65c"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_correo_correo2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="489" y="26" width="13" height="13" uuid="a5128840-f2cd-407a-9961-80a8e6cb4e99"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_correo_notificaionCorreo1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="489" y="43" width="13" height="13" uuid="359f90b0-ecb6-4ce1-b2f5-a0606b1cef33"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_correo_notificaionCorreo2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="383" y="13" width="78" height="12" forecolor="#FFFFFF" backcolor="#A3A3A3" uuid="56c34bf1-8fe8-4760-854e-3dcbe14fbbde">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="5" isBold="false" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[* Correo para recibir estado de cuenta]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="416" y="26" width="15" height="15" uuid="6b76349a-7f79-4193-a023-324aa1ba548f"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="416" y="43" width="15" height="15" uuid="65a39dbb-dc96-4a1b-b385-27383c53c8dc"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="417" y="26" width="13" height="13" uuid="38bbb16c-011c-465a-bd4d-7befab9ff496"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_correo_estadoCuenta1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="417" y="43" width="13" height="13" uuid="0b7e3016-f58b-4339-beea-5e63b2278635"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infContacto_correo_estadoCuenta2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupRepresentantesLegales"/>
+	<group name="GroupRepresentatesLegales">
+		<groupHeader>
+			<band height="30">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="0" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="9a75362d-7f48-46d1-86a2-0627855d563f"/>
+					<staticText>
+						<reportElement x="3" y="0" width="246" height="16" forecolor="#FFFFFF" uuid="6bf42651-0325-49d4-af6d-1746c71836ba"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN DE REPRESENTANTES LEGALES]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="260" y="1" width="238" height="16" forecolor="#FFFFFF" uuid="5d216f04-d86e-4080-abd6-515a8558ffc0">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="8" isBold="false"/>
+						</textElement>
+						<text><![CDATA[Para actualizar se requiere digitalizar documentación de soporte]]></text>
+					</staticText>
+				</frame>
+				<subreport>
+					<reportElement positionType="Float" x="-19" y="16" width="589" height="14" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="a3eb78ba-289b-45bf-84d9-b9b422c62347"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{repLegalesList})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subRptRepresentantesLegales.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupAccionistas">
+		<groupHeader>
+			<band height="61">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="0" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="78f8b0b3-a836-4b0b-8e54-d1d4e3666999">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="3" y="0" width="246" height="16" forecolor="#FFFFFF" uuid="91402cd8-218b-4f79-9eea-4ca0147d2bf0">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN DE ACCIONISTAS]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="260" y="0" width="238" height="16" forecolor="#FFFFFF" uuid="d3525ccb-7a82-4cfe-aaff-aaf1a31094d7"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="8" isBold="false"/>
+						</textElement>
+						<text><![CDATA[Para actualizar se requiere digitalizar documentación de soporte]]></text>
+					</staticText>
+				</frame>
+				<subreport>
+					<reportElement positionType="Float" x="-19" y="41" width="589" height="20" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="a3eb88ba-289b-45bf-84d9-b9b422c62347"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{beneficiariosList})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subRptBeneficiarios.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport>
+					<reportElement positionType="Float" x="-19" y="20" width="589" height="20" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="a3eb98ba-289b-45bf-84d9-b9b422c62347"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{accionistasList})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subRptAccionistas.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInfReferencia">
+		<groupHeader>
+			<band height="52">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="2" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="6b59340a-4dea-4faf-9b9e-9a7cfebd5e48">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="3" y="0" width="246" height="14" forecolor="#FFFFFF" uuid="c83132b9-7170-4274-aeb2-521d1d0d3a5c"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN DE REFERENCIAS]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="18" width="500" height="16" forecolor="#B89F7D" backcolor="#FCC09D" uuid="84f8e02d-204a-4acc-a6b3-0b377d34a5c9"/>
+					<staticText>
+						<reportElement x="3" y="-3" width="308" height="18" forecolor="#000000" uuid="10d41ba2-5836-48cc-9c5b-98c3353c7fea"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[PERSONA DE CONTACTO]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="36" width="100" height="16" uuid="c0b6234a-eac0-4616-a51d-3ed8ff2adb63">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[* Apellidos y Nombres:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="36" width="398" height="16" uuid="53a71bdd-016a-4b12-a8ff-2954c54ec112"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_contacto_nombre}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="referencia_contacto">
+		<groupHeader>
+			<band height="26">
+				<staticText>
+					<reportElement x="440" y="0" width="90" height="10" uuid="0bfacd5d-b471-4642-b69f-6ab259b1db38">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[* Cargo]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="440" y="10" width="90" height="16" uuid="24cd2cb3-7500-4eb2-a8f6-3d233ff6eea6">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_contacto_cargo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="244" y="0" width="88" height="10" uuid="76563807-ddfd-44b7-a077-8fc7d59771f8">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Teléfono]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="244" y="10" width="88" height="16" uuid="5996b168-2997-4fbe-abdd-f3281e4b7e5c">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_contacto_telefono}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="333" y="0" width="106" height="10" uuid="c3277d9c-ab37-462f-a25f-13c89f9987c8">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Celular]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="333" y="10" width="106" height="16" uuid="548202ba-128c-47ba-b81c-8d7be6991514">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_contacto_celular}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="9" width="100" height="16" uuid="d83c79e4-dd87-455c-a26f-73f09d5f9d22">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Correo Electrónico:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="132" y="9" width="108" height="16" uuid="b41059fb-d2bb-4679-a36f-37e415a122d0">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_contacto_correo}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInfRefPrincipalCliente">
+		<groupHeader>
+			<band height="40">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="2" width="500" height="16" forecolor="#B89F7D" backcolor="#FCC09D" uuid="9af8e3c4-328e-42ea-a5b1-c2477f6ba15d"/>
+					<staticText>
+						<reportElement x="3" y="0" width="308" height="18" forecolor="#000000" uuid="06738421-ef34-4161-b055-46bfc490456b"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[PRINCIPAL CLIENTE]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="20" width="100" height="20" uuid="dc4e3a2f-163b-4b34-b750-7397c33365af"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Apellidos y Nombres/Razón Social:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="132" y="23" width="132" height="15" uuid="972b8b90-0a1e-480f-8003-2f18d9ecc366">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_clientes_nombre}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="267" y="23" width="38" height="15" uuid="0723b744-4912-4a19-9da7-aec51431a4cc">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Teléfono:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="392" y="23" width="32" height="15" uuid="169f6408-4765-4884-95cf-1ed047605971">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Celular:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="426" y="23" width="102" height="15" uuid="b1b384d4-1026-4a4f-9be4-b1824fefd2e4">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_clientes_celular}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="307" y="23" width="83" height="15" uuid="29ae6c2f-6ce4-4121-8cf8-12ec85b86ec0">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_clientes_telefono}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInfRefPrincipalProveedor">
+		<groupHeader>
+			<band height="41">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="2" width="500" height="16" forecolor="#B89F7D" backcolor="#FCC09D" uuid="bf0d7c90-b016-4b69-a07b-a59c5dc419e4"/>
+					<staticText>
+						<reportElement x="3" y="0" width="308" height="18" forecolor="#000000" uuid="f05f5b25-4518-41cc-bcf5-6840274ed8a2"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[PRINCIPAL PROVEEDOR]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="21" width="100" height="20" uuid="f2040cc5-709d-4834-a383-f9fdf9b1277c">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Apellidos y Nombres/Razón Social:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="132" y="24" width="132" height="15" uuid="15d56157-269c-4a8f-ad7f-5ecf8c37eaf3">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_proveedor_nombre}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="307" y="24" width="83" height="15" uuid="4fae402e-7727-4448-bc63-1e1f11186ba2">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_proveedor_telefono}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="267" y="24" width="38" height="15" uuid="6b6b646a-5a2d-4659-9c70-3f9ddfb22e91">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*Teléfono:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="392" y="24" width="32" height="15" uuid="8097262b-1136-48c0-81a7-604125fe9f81">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Celular:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="426" y="24" width="102" height="15" uuid="c5e9c255-f758-4046-b008-4fcd3334f3c0">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infReferencia_proveedor_celular}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInfTranExterior">
+		<groupHeader>
+			<band height="119">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="0" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="31b3068a-dda8-4e78-8501-7d8fc6f9e171"/>
+					<staticText>
+						<reportElement x="3" y="1" width="347" height="18" forecolor="#FFFFFF" uuid="d1da53fc-5b50-41da-b66e-e1054ed7ae6a"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN DE TRANSACCIONES EN EL EXTERIOR]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="30" y="18" width="100" height="20" uuid="3be93ad5-1f24-40c8-9d8e-2e47cfa0798a"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Monto Estimado de Depósito Mensual (USD):]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="17" width="148" height="20" uuid="404762fe-19ba-48f1-b6c2-5736ca004a40"/>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_montoDepositoMensual}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="281" y="18" width="100" height="20" uuid="761861b5-4d92-46f0-b8aa-bbed0c19c24a"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Monto Estimado de Retiro Mensual (USD):]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="382" y="17" width="148" height="20" uuid="26be1606-86b7-43a8-90eb-9e5fb695e6b8"/>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_montoRetiroMensual}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="38" width="500" height="16" forecolor="#B89F7D" backcolor="#FCC09D" uuid="970c37a4-8401-4b31-93e4-7bde05887936"/>
+					<staticText>
+						<reportElement x="6" y="-1" width="308" height="18" forecolor="#000000" uuid="df8bc44d-86dc-4ca7-8de0-a0d7f9916dd3"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[TRANSACCIONES EN EL EXTERIOR]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="31" y="55" width="138" height="10" uuid="02798efb-f78e-4800-90af-263a7afa9411"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[¿Recibirá Transferencias del Exterior?]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="170" y="95" width="156" height="15" uuid="2a6df8c2-e81e-453a-be4b-d640b00fed81">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_montoAnualRecibira}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="170" y="55" width="156" height="10" uuid="3472571a-8470-4f6a-882c-c47c5c6e604c"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Estimado Monto Anual que Recibirá (USD)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="327" y="55" width="130" height="10" uuid="935e28d9-deba-4eec-a711-b9ccd5a2377e"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[País Origen de Transferencias]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="327" y="95" width="130" height="15" uuid="ae259df0-e793-4de9-8d80-6591e6670473">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_paisOrigen}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement stretchType="ElementGroupHeight" x="59" y="66" width="15" height="15" uuid="a7eb0d28-380c-4b13-b91b-e403ccfbc609">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Si]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="ElementGroupHeight" x="133" y="66" width="15" height="15" uuid="8566e279-4537-4547-9abd-6a8e76d9d973">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="170" y="66" width="156" height="15" uuid="4231c4d6-25a1-42f8-a60a-db32be461d8f">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_montoAnualEnviara}.setScale(2, BigDecimal.ROUND_HALF_UP).toString()]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="327" y="66" width="130" height="15" uuid="7a1439bb-016c-4a58-8b05-69467f3c5de5">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_paisDestino}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement stretchType="ElementGroupHeight" x="59" y="95" width="15" height="15" uuid="533a66d8-7ae0-4f26-9b1e-eeacd8f83c73">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Si]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="ElementGroupHeight" x="133" y="95" width="15" height="15" uuid="cae150f4-5a9f-4197-ae32-660eeb4d7df7">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="31" y="84" width="138" height="10" uuid="b58d6719-210b-41e6-802c-78b3702d8d87"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[¿Enviará Transferencias al Exterior?]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="170" y="84" width="156" height="10" uuid="e83aaa0d-f9bd-43e9-96a2-a072c50e67f2"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Estimado Monto Anual que Enviará (USD)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="327" y="84" width="130" height="10" uuid="e95929a3-51a1-429a-a45e-4f483e59b5c0"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[País Destino de Transferencias]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="36" y="95" width="15" height="15" uuid="fcfbeb86-49fc-4b6e-8512-3ad28f40bd60">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_enviaraSi}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="110" y="95" width="15" height="15" uuid="e03e5f89-91c2-4dc5-b327-1d4a4e1215d7">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_enviaraNo}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="36" y="66" width="15" height="15" uuid="689493bc-b0e3-4539-8277-3f22411a180d">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_recibiraSi}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="110" y="66" width="15" height="15" uuid="e9f2f757-510e-40cb-8b4b-e29ab6d78b32">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infTranExterior_recibiraNo}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupInfAdicional">
+		<groupHeader>
+			<band height="123">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="0" width="500" height="16" forecolor="#B89F7D" backcolor="#9C9898" uuid="0e61fd6d-6136-441b-ba7a-6fe5baa12c7b"/>
+					<staticText>
+						<reportElement x="3" y="0" width="347" height="18" forecolor="#FFFFFF" uuid="01c7da5f-f9c5-4295-a2a1-31722f00248e"/>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN ADICIONAL]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="31" y="18" width="100" height="20" uuid="b0610c4f-c217-4e7f-8756-cbe091d19981"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[*¿Es cliente de otras Instituciones Financieras?]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="329" y="21" width="201" height="16" uuid="cf909537-d6fe-43f3-a282-dd06aee14b7e">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infAdicional_institucion}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="139" y="21" width="15" height="15" uuid="853f926f-d0f4-4fff-b185-e337bf26ebc1">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infAdicional_otroInstitucionSi}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="157" y="21" width="15" height="15" uuid="2bdb7d78-8a06-4c60-aa74-40feded7114b">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Si]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="183" y="21" width="15" height="15" uuid="e621ace5-62dc-42ff-80fc-fac5b2886924">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infAdicional_otroInstitucionNo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="201" y="21" width="15" height="15" uuid="2a05293d-148a-468f-bc36-30ba23fd3e9c">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="237" y="21" width="88" height="16" uuid="dbdd6041-5d8a-42e0-b5e4-8371b3cba675">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Institución Financiera:]]></text>
+				</staticText>
+				<frame>
+					<reportElement mode="Opaque" x="30" y="48" width="500" height="16" forecolor="#B89F7D" backcolor="#FC8C42" uuid="40123527-9272-491f-95fb-5f7f76caeae0">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="6" y="0" width="308" height="16" forecolor="#FFFFFF" uuid="a39503d6-f992-433b-a52d-7ed257339aff">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<box>
+							<topPen lineColor="#000000"/>
+							<leftPen lineColor="#000000"/>
+							<bottomPen lineColor="#000000"/>
+							<rightPen lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[INFORMACIÓN INTERNA]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="31" y="73" width="100" height="30" uuid="945d6333-4aaf-4b71-ad3a-e40589bcb758">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Observaciones sobre la Vinculación del Cliente
+ o Instrucciones Especiales:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="148" y="67" width="380" height="52" uuid="01f8922b-2cda-4922-98b4-5e3dcc964b60">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="5" leftPadding="5" bottomPadding="0" rightPadding="0">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="html">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{infAdicional_observaciones}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupVinculacion">
+		<groupHeader>
+			<band height="50" splitType="Stretch">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="30" y="28" width="501" height="20" uuid="85e1e7b6-13f7-42fd-898e-c76ae118e5d8"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold='true'>1.1.	OBJETO</style>.- El presente contrato tiene por objeto establecer las condiciones generales comunes para la vinculación del CLIENTE con el BANCO aplicables para  la futura contratación de los diferentes productos y/o servicios autorizados por la Ley con los que cuenta Banco Internacional S.A; productos y/o servicios cuyas cláusulas, características y condiciones particulares están determinadas en documentos, contratos o solicitudes específicos que el CLIENTE suscribirá con EL Banco de manera independiente de acuerdo a sus necesidades y requerimientos. "+ "\n" +
+"Para el efecto, el CLIENTE declara que el BANCO le ha informado sobre su derecho de contratar cualquiera de los productos y servicios ofertados por el BANCO de forma independiente el uno del otro, sin ningún tipo de condición."+ "\n\n" +
+
+"<style isBold='true'>1.2.	DERECHOS Y OBLIGACIONES DEL CLIENTE: </style>"+ "\n" +
+"<style isBold='true'>1.2.1.</style>	Son derechos del CLIENTE"+ "\n" +
+"<style isBold='true'>a)</style>"+" "+"Que el BANCO tome las medidas necesarias para mantener la confidencialidad y no divulgación de toda o parte de su información confidencial, la cual podrá ser revelada a terceros previo acuerdo de las partes, por autorización del CLIENTE, por requerimiento de autoridad competente o en los casos previstos en este instrumento. "+ "\n" +
+"<style isBold='true'>b)</style>"+" "+"Acceder y recibir directamente información clara, precisa, oportuna, razonable, adecuada, validada, veraz y completa, relacionada con los productos y servicios ofertados por el BANCO, en la forma y periodicidad estipulada por la autoridad competente o en la normativa vigente."+ "\n" +
+"<style isBold='true'>c)</style>"+" "+"Acceder a los distintos niveles de educación financiera que le permita comprender sus derechos y obligaciones en el ámbito financiero; el rol de la Superintendencia de Bancos, el rol del sistema financiero, la base legal pertinente; el alcance y efectos de los productos y servicios de los sectores financieros público y privado, que le permita tomar decisiones informadas, y defender sus derechos de tal manera que facilite su participación social activa y responsable."+ "\n" +
+"<style isBold='true'>d)</style>"+" "+"Elegir con plena libertad productos y servicios financieros ofertados por el BANCO en función de los precios, tarifas, gastos, costos, así como los beneficios existentes, y/o a suscribir instrumentos, sin ser presionado, coaccionado o inducido mediante prácticas prohibidas."+ "\n" +
+"<style isBold='true'>e)</style>"+" "+"A recibir productos y servicios financieros de forma oportuna, eficaz y eficiente."+ "\n" +
+"<style isBold='true'>f)</style>"+" "+"Las demás determinadas en la normativa vigente, el presente contrato o en los documentos que el CLIENTE  suscriba con el BANCO de manera particular para la contratación de los productos y servicios que cuenta el BANCO."+ "\n\n" +
+
+"<style isBold='true'>1.2.2.</style>	Son Obligaciones del CLIENTE:"+ "\n" +
+"<style isBold='true'>a)</style>"+" "+"Proporcionar al BANCO información veraz y mantener actualizada su información relevante reportando al Banco de forma inmediata cualquier cambio en la misma, de manera especial la señalada para notificaciones como son dirección, números de teléfono y correo electrónico; así como la información correspondiente a sus ingresos mensuales."+ "\n" +
+"<style isBold='true'>b)</style>"+" "+"Mantener en sus cuentas los fondos suficientes para cumplir sus obligaciones con terceros y con el BANCO."+ "\n" +
+"<style isBold='true'>c)</style>"+" "+"Seguir las recomendaciones y medidas de seguridad de acuerdo con lo determinado en las condiciones particulares para cada producto y servicio señaladas por el Banco y las autoridades competentes."+ "\n" +
+"<style isBold='true'>d)</style>"+" "+"Acceder a los productos y servicios financieros respetando los requisitos legales, las políticas del BANCO acorde a las sanas prácticas y a la normativa vigente."+ "\n" +
+"<style isBold='true'>e)</style>"+" "+"Las demás determinadas en la normativa vigente, en el presente contrato o en los documentos que el CLIENTE  suscriba con el BANCO de manera particular para la contratación de los productos y servicios que cuenta el BANCO."+ "\n\n" +
+
+"<style isBold='true'>1.3.	INFORMACIÓN ADICIONAL RELEVANTE</style>.- El CLIENTE declara conocer la información relevante respecto a la Ley de Defensa del Consumidor, que para mayor abundamiento consta en el anexo respectivo. Igualmente, declara que ha sido informado y conoce que en el BANCO funciona la Unidad de Atención al CLIENTE, ante la cual podrá presentar sus observaciones o inconformidades respecto de los servicios prestados por el Banco que contravengan las condiciones determinadas en el presente contrato e instrumentos legales que las partes llegaren a suscribir  y/o con la normativa vigente aplicable. "+ "\n" +
+"El BANCO, por su parte, de manera expresa indica que es responsable frente al cliente de los productos y/o servicios que presta en función de los contratos que suscriba con el CLIENTE, dentro de las condiciones y características propias de cada uno y conformidad con la normativa vigente aplicable "+ "\n\n" +
+
+"<style isBold='true'>1.4.	BENEFICIOS Y PROMOCIONES:</style> Las partes convienen en que el BANCO podrá establecer en cualquier momento beneficios y/o promociones para el CLIENTE de acuerdo al comportamiento e historial de los productos contratados, los mismos que serán notificados al CLIENTE mediante los medios de comunicación y publicaciones que el BANCO considere adecuados y que estarán vigentes por el tiempo que el BANCO determine libremente. "+ "\n" +
+"En estos supuestos, el CLIENTE, al mismo tiempo que goce de tales beneficios, deberá cumplir con los requisitos que determine y comunique el BANCO para tenerlos. El BANCO quedará igualmente autorizado a concluir el otorgamiento de beneficios, suspenderlos, modificarlos, cancelarlos o restringirlos o a eliminar todos o un determinado producto del programa, sin que pueda alegársele la existencia de derechos adquiridos, para lo cual el BANCO notificará al CLIENTE la eliminación de estos beneficios de la manera de comunicación que el BANCO considere adecuada. Sin embargo de lo señalado, el CLIENTE tendrá siempre derecho a solicitar su exclusión de estos programas especiales. "+ "\n" +
+" Los beneficios establecidos a favor del CLIENTE, podrán ser suprimidos de manera definitiva, o suspendidos temporalmente por el BANCO por causas como: las condiciones del mercado, sus políticas internas, reformas legales, disposiciones gubernamentales, etc. "+ "\n\n" +
+
+"<style isBold='true'>1.5.	LICITUD DE FONDOS:</style> El CLIENTE declara, expresamente y bajo juramento, que todos los fondos que vayan a ser depositados por el CLIENTE, por sus dependientes o por terceros debidamente autorizados por él, y todas las operaciones o transacciones que se realicen en, sobre, o con las cuentas, tarjetas, inversiones y demás productos y servicios que contrate con el BANCO, tendrán un origen y un destino lícitos, sin relación directa o indirecta alguna con: el lavado de activos, financiamiento del terrorismo y otros delitos, producción, consumo o tráfico de las sustancias estupefacientes y psicotrópicas y más infracciones previstas en el Código Integral Penal y demás leyes pertinentes. "+ "\n" +
+" Expresamente autoriza al BANCO, realizar las verificaciones y debida diligencia correspondientes e informar de manera inmediata y documentada a la autoridad competente en casos de investigación o cuando se detectare transacciones inusuales e injustificadas, por lo que no ejercerá ningún reclamo o acción judicial."+ "\n" +
+"Si esta declaración jurada fuese falsa o errónea, el CLIENTE será responsable de tal falsedad o error, el BANCO quedará eximido de toda responsabilidad frente a cualquier Autoridad o persona, y adicionalmente podrá cerrar o cancelar los productos y/o servicios  que el CLIENTE mantenga en el BANCO, y declarar de plazo vencido todas o cualquiera de las obligaciones a cargo del CLIENTE.   El BANCO está expresamente facultado para proporcionar a las autoridades competentes las informaciones que estas demanden, en los casos previstos en la Ley y Reglamentos, respecto de las operaciones del CLIENTE con el BANCO."+ "\n\n" +
+
+"<style isBold='true'>1.6.	VINCULADOS</style>: El CLIENTE, libre y voluntariamente, declara que conoce sobre la prohibición que tienen las entidades financieras sobre determinadas operaciones con vinculados, declarando por ello expresamente que de estar  incurso en las causales de vinculación establecidas en la normativa legal vigente, se compromete a notificar al BANCO de manera inmediata dicha condición o cualquier cambio que diera lugar a la misma. "+ "\n\n" +
+
+"<style isBold='true'>1.7.	SEGURO DE DEPOSITOS</style>: La Corporación del Seguro de Depósitos, Fondo de Liquidez y Fondo de Seguros Privados es aseguradora de los depósitos hasta la cobertura vigente, por persona natural o jurídica, salvo las excepciones establecidas en la normativa vigente aplicable. El monto máximo asegurado para el ejercicio fiscal aplicable se publica en la página web del BANCO y de la antedicha Corporación."+ "\n\n" +
+
+"<style isBold='true'>1.8.	INFORMACIÓN</style>: El CLIENTE reconoce que en el marco de la relación que este contrato genera, entregará al BANCO información sobre su situación personal, financiera y crediticia, la misma que SI "+$P{textoAutorizacion1Si}+" NO "+$P{textoAutorizacion1No}+" autoriza expresamente al BANCO a dar tratamiento y procesar de la manera más amplia permitida por las normas pertinentes.  Asimismo el CLIENTE SI "+$P{textoAutorizacion2Si}+" NO "+$P{textoAutorizacion2No}+" autoriza expresamente al BANCO a utilizar la información a efectos de:"+ "\n" +
+"<style isBold='true'>a)</style> Ofrecerle cualquiera de los productos o servicios que el BANCO brinda o podría brindar en el futuro."+ "\n" +
+"<style isBold='true'>b)</style> Ofrecerle cualquiera de los productos o servicios de terceras personas que el BANCO podría considerar que general un valor agregado o un beneficio para sus clientes."+ "\n" +
+"El CLIENTE declara que estarán incluidos dentro del concepto de transferencia de información todos aquellos datos del CLIENTE a los que el BANCO pudiera acceder en el curso normal de sus operaciones. "+ "\n\n" +
+
+"<style isBold='true'>1.9.	DOMICILIO</style>: A efectos de la recepción y envío de cualquier notificación relacionada con el cumplimiento o aplicación de la presente vinculación como cliente de Banco Internacional, el CLIENTE señala como domicilio el especificado en el numeral 1 de la cláusula Primera de Antecedentes del presente contrato. "+ "\n" +
+"El CLIENTE se compromete a hacer conocer al BANCO, en forma inmediata, los cambios de su dirección y demás datos aquí detallados. El BANCO no se responsabiliza en caso de que el CLIENTE no notifique tales cambios con la debida oportunidad. "+ "\n\n" +
+
+"<style isBold='true'>1.10.	AUTORIZACIÓN LEY FATCA</style>: El CLIENTE ratifica que ha sido informado por el Banco Internacional S.A., sobre las normas legales ecuatorianas emitidas respecto de la Ley sobre Cumplimiento Tributario de Cuentas Extranjeras - FATCA, y que en el caso de estar inmerso en la condición de sujeto pasivo domiciliado en el Ecuador determinado en dicha Ley FATCA, a solicitud del Banco, emitirá una autorización expresa para que Banco Internacional S.A. entregue la información requerida por la Autoridad Fiscal de los Estados Unidos de América IRS (Internal Revenue Service), conforme lo dispuesto en la normativa ecuatoriana. Adicionalmente, de ser el caso proporcionará los formularios (W8 o W9) o similares requeridos por el IRS.  El incumplimiento de este requerimiento será causal de terminación anticipada del presente contrato y por ende de todos los contratos que el CLIENTE suscriba con el BANCO de manera particular para cada producto y servicio. "+ "\n" +
+" El CLIENTE declara que conoce y acepta que Banco Internacional S.A. deberá, en cumplimiento a lo señalado en la normativa ecuatoriana, entregar previamente, la información bancaria y/o crediticia solicitada, al Servicio de Rentas Internas SRI del Ecuador para su respectivo registro. Por lo señalado, deslinda al BANCO de toda responsabilidad por la entrega de la información solicitada, sin alegar violación a norma expresa."+ "\n\n" +
+
+"<style isBold='true'>1.11.	AUTORIZACIÓN</style>.- El CLIENTE autoriza expresamente a BANCO INTERNACIONAL S.A. para que obtenga en cualquier momento de la Dirección Nacional de Registro de Datos Públicos DINARDAP o del estamento Estatal designado por ésta, o de quien esté debidamente autorizado para hacerlo, su(s) referencias e información personal(es) sobre su comportamiento crediticio, manejo de su(s) cuenta(s) corriente(s), de ahorros, tarjeta(s) de crédito, etc. y en general sobre el cumplimiento de su(s) obligaciones y demás información relacionada con sus activos, pasivos y contingentes; así como, datos personales e información de carácter general. De igual forma el BANCO queda expresamente autorizado para que pueda en cualquier momento utilizar, transferir o entregar dicha información a autoridades competentes, organismos de control y otras Instituciones o personas jurídicas legal o reglamentariamente facultadas. La información obtenida y entregada bajo esta autorización, podrá ser utilizada por el BANCO dentro de su actividad financiera regular. "+ "\n\n" +
+
+"<style isBold='true'>1.12.	MODIFICACIONES</style>: El BANCO podrá modificar las condiciones del presente contrato, las mismas que serán notificadas al CLIENTE, con la oportunidad que la norma vigente contemple; y, si no hubiere oposición expresa en un plazo no mayor a 5 días o en el determinado por la normativa vigente para el efecto en los casos que esta contemple, se las entenderá incorporadas al contrato y aceptadas por el CLIENTE. "+ "\n"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="30" y="6" width="501" height="18" uuid="2c1fae53-25a4-4b23-b669-ffcc5be318d8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[1.	Capítulo I: VINCULACION]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupVinculacionCapitulo2">
+		<groupHeader>
+			<band height="50">
+				<staticText>
+					<reportElement positionType="Float" x="30" y="4" width="501" height="18" uuid="3397c7e1-5e52-40e0-a530-7aab603493ac"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[2.	CAPITULO II: CANALES ELECTRÓNICOS]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="30" y="27" width="501" height="20" uuid="be37b4e9-86f4-40e7-825a-43e637d14fb9"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold='true'>2.1.	DEFINICIONES</style>: Para efectos de este capítulo, se entenderá por:"+ "\n\n" +
+
+"<style isBold='true'>2.1.1.	TRANSACCIONES</style>.- consultas, transferencias, créditos a cuentas sean corrientes o de ahorros, débitos, retiros, pagos, cambios de claves y en general cualquier tipo de operación y/o acceso a los servicios financieros autorizados al BANCO."+ "\n\n" +
+
+"<style isBold='true'>2.1.2.	CANALES ELECTRÓNICOS</style>: elementos o dispositivos electrónicos o tecnológicos como son el Cajero Automático (ATM), Internet, Celular, Centro de Llamadas Telefónicas (voz a voz, audio respuesta o cualquier otra mediante el uso del teléfono), Terminales de Autoservicio, POS, Notificaciones por SMS u otros similares que el BANCO implemente previa autorización de autoridad competente."+ "\n\n" +
+
+"<style isBold='true'>2.1.3.	FACTORES O MECANISMOS DE AUTENTIFICACIÓN</style>: dependiendo del canal y tipo de transacción podrán ser dispositivos o información que solo el CLIENTE “tenga”, “conozca” o “sea” como son usuario, clave, contraseña, tarjeta, dispositivos electrónicos, número de identificación del Cliente,  y/u otros similares que el Banco implemente de acuerdo a las necesidades y seguridad del CLIENTE."+ "\n\n" +
+
+"<style isBold='true'>2.1.4.	TARJETA</style>: Tarjeta(s) de Débito o de Cajero Automático principales o adicionales. "+ "\n\n" +
+
+"<style isBold='true'>2.1.5.	INSTRUCCIONES</style>: Instrucciones que el CLIENTE le confiera, entregue o transmita al BANCO a través de los canales electrónicos y de los medios de autentificación para la realización de las transacciones."+ "\n\n" +
+
+"<style isBold='true'>2.1.6.	CLAVES DE ACCESO</style>: Esto aplica a usuarios, claves, contraseña, PIN u otros medios de autenticación biométricos. "+ "\n\n" +
+
+"<style isBold='true'>2.2.	OBJETO</style>.- El presente Capítulo tiene por objeto establecer las condiciones del manejo de los canales electrónicos con los que cuenta el BANCO a través de los cuales el CLIENTE podrá realizar cualquier tipo de transacciones tales como: consultas, transferencias, créditos a cuentas sean corrientes o de ahorros, débitos, retiros, pagos, cambios de claves y en general ejecutar cualquier tipo de transacción u operación, realizar solicitudes (preventa, venta, etc.) y/o acceder a los servicios financieros autorizados al Banco (en adelante las TRANSACCIONES), entendiendo que el acceso a estos canales atenderá a la naturaleza de la operación a realizar y al alcance de cada canal."+ "\n\n" +
+
+"<style isBold='true'>2.3.	CANALES ELECTRÓNICOS</style>.- Se entenderá como canales electrónicos a todas las vías o formas a través de los cuales el CLIENTE puede solicitar al BANCO la realización de TRANSACCIONES mediante el uso de elementos o dispositivos electrónicos o tecnológicos como son el Cajero Automático (ATM), Internet, Celular, Centro de Contacto (voz a voz, audio respuesta o cualquier otra mediante el uso del teléfono, dispositivo tecnológico de comunicación autorizado), Terminales de Autoservicio, POS, Mensajes SMS u otros similares que el BANCO implemente en el futuro con la debida autorización de los entes de control (en adelante CANALES ELECTRÓNICOS) los mismos que, de conformidad con las políticas del Banco y tipo de canal, a partir de la presente fecha estarán a disposición del CLIENTE y cuyas características son:"+ "\n" +
+"forma ágil y segura a través de un centro de contacto telefónico u otros dispositivo tecnológico de comunicación autorizado."+ "\n\n" +
+
+"<style isBold='true'>a)"+" "+"BANCA ON LINE</style>: Es el canal electrónico basado en una aplicación WEB, mediante el cual los clientes de Banco Internacional pueden acceder a información relacionada con sus productos y realizar transacciones monetarias y no monetarias de forma rápida y segura desde dispositivos tecnológicos usando un Navegador Web, conectados a internet."+ "\n\n" +
+
+"El BANCO ha desarrollado una plataforma electrónica para la Banca on line para personas jurídicas (en adelante “BANCA EMPRESAS”) con la infraestructura necesaria para efectuar una gama de servicios, por cuenta del Cliente y de acuerdo a las instrucciones que reciba por parte de éste, cuyas características y condiciones particulares se detallan en el presente capítulo."+ "\n\n" +
+
+"<style isBold='true'>b)"+" "+"BANCA MÓVIL</style>: Es el canal electrónico mediante el cual los clientes de Banco Internacional pueden acceder a información relacionada con sus productos y realizar transacciones monetarias y no monetarias de forma rápida y segura desde su dispositivo móvil ((Smartphones, Tablets ) a través de una aplicación."+ "\n\n" +
+
+"<style isBold='true'>c)"+" "+"CONTACT CENTER</style>: Es el canal electrónico mediante el cual los clientes de Banco Internacional pueden acceder a información relacionada con sus productos y realizar transacciones monetarias y no monetarias de forma ágil y segura a través de un centro de contacto telefónico u otros dispositivo tecnológico de comunicación autorizado."+ "\n\n" +
+
+"<style isBold='true'>d)"+" "+"CAJEROS AUTOMÁTICOS</style>: Es el canal electrónico mediante el cual los clientes de Banco Internacional pueden realizar transacciones monetarias y no monetarias de forma ágil y segura en un dispositivo electro mecánico (Cajero Automático) utilizando como medio de autenticación su tarjeta de débito u  otros medios de autenticación autorizados"+ "\n\n" +
+
+"<style isBold='true'>e)"+" "+"AUTOSERVICIO</style>: Es el canal electrónico mediante el cual los clientes de Banco Internacional pueden acceder a información relacionada con sus productos y realizar transacciones monetarias y no monetarias de forma ágil y segura a través de los equipos instalados, distintos a cajeros automáticos, en ubicaciones físicas estáticas dentro de las oficinas del banco o fuera de ellas."+ "\n\n" +
+
+"<style isBold='true'>f)"+" "+"MENSAJES VIA SMS</style>.- El BANCO enviará notificaciones vía mensajes de texto al teléfono celular del CLIENTE, para informar accesos, transacciones o recepción de instrucciones por parte del CLIENTE. "+ "\n\n" + 
+
+"<style isBold='true'>2.4.	TERCERA.- AUTENTIFICACIÓN E INSTRUCCIONES GENERALES</style>.- El BANCO para el uso de los CANALES ELECTRÓNICOS dispondrá de factores o mecanismos de autentificación para validar la identidad del CLIENTE, los cuales, dependiendo del canal y tipo de transacción podrán ser dispositivos o información que solo el CLIENTE tenga, conozca o sea como son usuario, clave, contraseña, tarjeta, dispositivos electrónicos, número de identificación del Cliente,  y/u otros similares que el Banco implemente de acuerdo a las necesidades y seguridad del CLIENTE. El BANCO podrá variar los factores de autenticación de acuerdo al canal electrónico utilizado y al mínimo requerido por la normativa vigente."+ "\n" +
+"El CLIENTE acepta que las TRANSACCIONES objeto de los contratos que suscriba podrán ser llevadas a cabo a través de los CANALES ELECTRÓNICOS, así como acepta que el BANCO cumplirá las instrucciones que el CLIENTE le confiera, entregue o transmita a través de los CANALES ELECTRÓNICOS (en adelante las INSTRUCCIONES). Las INSTRUCCIONES así efectuadas constituirán suficiente prueba del consentimiento del CLIENTE, y de la concesión al BANCO de todas las facultades necesarias para ejecutarlas. Por lo mismo, el CLIENTE no podrá alegar que las operaciones realizadas se hicieron sin su autorización previa. Es de exclusiva responsabilidad del CLIENTE la corrección y legitimidad de la elaboración y transmisión de las INSTRUCCIONES, de manera que el BANCO no tendrá en ello responsabilidad de ninguna clase.  El CLIENTE reconoce que el BANCO no realizará ninguna verificación adicional a las seguridades de sus CANALES ELECTRÓNICOS, para el cumplimiento de las INSTRUCCIONES hechas por el CLIENTE. Las INSTRUCCIONES se ejecutarán bajo la responsabilidad exclusiva del CLIENTE, de acuerdo a lo establecido en el presente contrato, y de acuerdo a las especificaciones o detalles que el BANCO ponga en conocimiento del CLIENTE, sin necesidad de que éste tenga que firmar documentación adicional alguna o acercarse al BANCO, excepto cuando el BANCO o una norma legal o reglamentaria exija la firma autógrafa del CLIENTE. "+ "\n" +
+"En tal virtud, EL CLIENTE libera de responsabilidad al BANCO por una INSTRUCCIÓN mal ingresada o mal otorgada, en los CANALES ELECTRÓNICOS que el BANCO haya puesto a disposición del CLIENTE."+ "\n" +
+"El uso de las claves, contraseñas, usuarios y demás factores de autentificación será de exclusiva responsabilidad del CLIENTE, quien reconoce y acepta desde ahora como suyas todas las TRANSACCIONES que se soliciten y celebren con el Banco utilizando dichos factores."+ "\n" +
+"El CLIENTE autoriza especial y expresamente al BANCO para que cuando reciba su INSTRUCCIÓN, realice débitos a sus cuentas, y que reciba mediante los sistemas electrónicos o electromecánicos, los créditos que terceras personas realicen en las cuentas del CLIENTE. "+ "\n\n" +
+
+"<style isBold='true'>2.5.	CLAVES DE ACCESO</style>.-  En los casos en los cuales se requiera de usuarios y/o claves (contraseña, PIN u otros medios de autenticación biométricos) (en adelante CLAVES DE ACCESO) como medio de identificación para el uso de canales electrónicos el BANCO asignará al CLIENTE una clave de acceso inicial que le permitirá ingresar a los CANALES ELECTRÓNICOS la misma que el CLIENTE deberá cambiar inmediatamente por otra diferente a su elección, siguiendo para el efecto los procedimientos establecidos por el BANCO. La clave de acceso posibilitará al CLIENTE realizar las TRANSACCIONES permitidas por el BANCO, en tal sentido el CLIENTE reconoce y acepta que el uso, manejo, custodia  y mantenimiento en estricta reserva y confidencialidad de la CLAVE DE ACCESO es de su exclusiva responsabilidad, que conoce que está facultado a cambiar su CLAVE DE ACCESO cuantas veces lo necesite o desee, así como deberá  cambiarla de manera obligatoria cuando el BANCO lo solicite, por lo tanto el CLIENTE libera al BANCO de toda responsabilidad nacida del uso de la CLAVE en cualquier circunstancia, o de su falta de cambio cuando el BANCO lo haya solicitado."+ "\n" +
+"El BANCO podrá, en cualquier tiempo a su discreción, retirar al CLIENTE el derecho a usar uno o varios canales electrónicos a través del bloqueo de la CLAVE DE ACCESO o del bloqueo del canal electrónico, cuando él considere que existe riesgo en las seguridades tanto del CLIENTE como del BANCO, sin lugar a reclamo por parte del CLIENTE."+ "\n" +
+"Para el  cambio y/o reseteo de las CLAVES DE ACCESO el  CLIENTE deberá solicitar al Banco de acuerdo a los procedimientos que el Banco mantiene para el efecto y que serán previamente informados al Cliente. "+ "\n\n" +
+
+"<style isBold='true'>2.6.	TARJETA DE DÉBITO</style>: El BANCO podrá entregar una o varias tarjeta(s) de Débito o de Cajero Automático (en adelante la “TARJETA”) que servirá, para el presente caso de uso de canales electrónicos, para que el CLIENTE o las personas autorizadas por él y bajo su exclusiva responsabilidad, realicen TRANSACCIONES a través de los CANALES ELECTRÓNICOS disponibles del Banco como son cajeros automáticos u otros medios electrónicos o telefónicos, y a realizar consumos en locales comerciales afiliados a redes interbancarias  a nivel nacional e internacional, internacional incluyendo a VISA entre otras, sea a través de POS, Swich transaccional y/o internet para lo cual el número de la TARJETA podrá servir como identificador del CLIENTE en los casos en que no requiera el uso físico de la TARJETA, sin embargo de lo señalado el BANCO podrá desarrollar nuevas maneras o accesos a las TRANSACCIONES los cuales serán notificados al CLIENTE cuando puedan ser utilizados."+ "\n" +
+"Las condiciones específicas para el uso, mantenimiento, renovación y otras relacionadas con las TARJETAS están determinadas en los contratos particulares de cuentas según corresponda."+ "\n" +
+"La tarjeta de débito o cajero automático podrá estar atada a una o más cuentas que mantenga el CLIENTE en el BANCO, en tal sentido si el CLIENTE posee más de una cuenta, sus TRANSACCIONES con el uso de la tarjeta de débito se aplicarán al momento de realizarlas a la cuenta que escoja el CLIENTE."+ "\n\n" +
+
+"<style isBold='true'>2.7.	CUARTA: NORMAS BÁSICAS PARA EL ACCESO A LOS CANALES ELECTRÓNICOS DEL BANCO Y SEGURIDADES</style>.- "+ "\n" +
+"- Para acceder a los CANALES ELECTRÓNICOS del BANCO, el CLIENTE deberá proporcionar clave de acceso, usuario, número de identificación o demás factores de autentificación determinados por el Banco para cada uno de los canales. Los accesos quedarán registrados en el BANCO. De conformidad con lo que determine el BANCO y autorice la normativa vigente, para el acceso a los CANALES ELECTRÓNICOS se requerirá el uso de los factores de autenticación (algo que se sabe, algo que se tiene y algo que se es) de conformidad a la norma vigente "+ "\n" +
+"- Al recibir las INSTRUCCIONES el BANCO podrá, a su entera discreción, aceptarlas o rehusarlas por motivos de seguridad del CLIENTE o del BANCO. Si las aceptare, las procesará y las archivará en el medio o dispositivo que escoja el BANCO. Si las rehusare, lo notificará al CLIENTE por la misma vía. "+ "\n" +
+"- El CLIENTE autoriza al BANCO, de manera expresa e irrevocable, que en caso de tres (3) intentos fallidos de acceso a cualquier CANAL ELECTRÓNICO, este se bloqueará y para reactivarlo el CLIENTE deberá cumplir con los procedimientos determinados por el BANCO para tal efecto. "+ "\n" +
+"- La información tanto del CLIENTE como del BANCO que se encuentre en los sistemas electrónicos, electromecánicos o automáticos del BANCO, se encuentra codificada por seguridad de las partes."+ "\n" +
+"Constituyen medidas de seguridad mínimas para el adecuado y seguro uso de los CANALES ELECTRÓNICOS: a) en la medida de lo posible destinar equipos exclusivos para el acceso desde el internet; b) evitar bajar archivos adjuntos a correos de dudosa procedencia; c) evitar proporcionar datos relacionados con los mecanismos de autentificación utilizados para acceder a los canales del BANCO; d) Utilizar antivirus y mantenernos actualizados; e) Modificar las claves de acceso cuando aplique de manera periódica; f) Estar atento a los consejos de seguridad que el BANCO comunique al CLIENTE a través de sus diferentes canales."+ "\n" +
+"- Los montos máximos permitidos para las transacciones que pueda realizar a través de los CANALES ELECTRÓNICOS, incluyendo los retiros de efectivo, quedarán expresamente instruidos por el CLIENTE en los documentos que este suscriba a futuro con el BANCO, de conformidad con los productos y/o servicios que el CLIENTE llegue a contratar  con el Banco. Montos máximos que podrán ser actualizados por el CLIENTE en cualquier momento, de conformidad con lo que determine el BANCO para el efecto, sin que ello requiera o implique modificación del contrato."+ "\n\n" +
+
+"<style isBold='true'>2.8.	NORMAS E INSTRUCCIONES ESPECÍFICAS PARA LOS CANALES ELECTRÓNICOS</style>.- Las características e instrucciones específicas, salvo casos especiales que constan en el presente contrato, para el uso de cada uno de los canales electrónicos, como es la combinación de los factores de autenticación para su uso seguro, constarán publicados en la página web del BANCO los mismos que el CLIENTE acepta y declara que conoce que podrán ser actualizadas y modificadas por el BANCO en cualquier momento para atender de la mejor manera las necesidades del CLIENTE, cambios que serán notificados al CLIENTE de conformidad con la normativa vigente.- "+ "\n\n" +
+
+"<style isBold='true'>2.8.1.	BANCA ON LINE – BANCA EMPRESAS</style>: Los servicios BANCA EMPRESAS permiten al CLIENTE directamente o mediante personas debidamente autorizadas, realizar, consultas, transacciones en línea de pagos, cobros, transferencias, depósitos electrónicos y otras que a futuro sean puestas a su disposición por el Banco. El Cliente para acceder a la BANCA EMPRESAS suscribirá ANEXOS OPERATIVOS BANCA EMPRESAS que le habilitarán el acceso y uso de los servicios contratados mediante este instrumento, los cuales las partes podrán suscribirlos en cualquier tiempo de acuerdo a las necesidades y requerimientos del CLIENTE; así como modificarlos o suscribir anexo nuevos, en  cualquier momento sin que ello requiera o implique modificación del contrato."+ "\n" +
+"El CLIENTE podrá registrar y autorizar, mediante la suscripción de los ANEXOS OPERATIVOS BANCA EMPRESAS de este contrato a los usuarios que deberán acceder a los servicios BANCA EMPRESAS, mismos que acceden dependiendo de las atribuciones otorgadas por el Cliente a cada Usuario en los diferentes servicios, los mismos que podrán ser:"+ "\n" +
+"	a)"+" "+"BANCA EMPRESAS PAGOS.- Pago a proveedores; Pago Nómina; Pago Terceros; Pago Electrónico de Nómina; Transferencias al exterior SWIFT; Confirmación Electrónica de Pago de Cheques."+ "\n" +
+"	b)"+"  "+"BANCA EMPRESAS COBROS.- Recaudaciones con y sin información; Cobranzas Empresas."+ "\n" +
+"	c)"+"  "+"BANCA EMPRESAS CONSULTAS.- Banca on line."+ "\n" +
+"A estos servicios, podrá el Banco adicionar otros, siempre y cuando notifique al Cliente la prestación de nuevos servicios, y estos sean aceptados mediante la suscripción de la documentación que corresponda.  "+ "\n" +
+"Para la prestación de los Servicios que generen débito, o pago, el CLIENTE será responsable de señalar claramente el número de cuenta a la cual se deberá realizar el débito y/o pago correspondiente. "+ "\n" +
+"El Cliente aceptará las condiciones y obligaciones específicas para cada uno de los servicios antes mencionados, que se establecen en los ANEXOS OPERATIVOS BANCA EMPRESAS que correspondan a cada servicio y que debidamente suscritos por el Cliente pasará a formar parte integrante de este contrato."+ "\n\n" +
+
+"<style isBold='true'>2.8.1.1.</style> El CLIENTE podrá solicitar al BANCO el servicio de administración directa de usuarios, el mismo que le permitirá crear, modificar, eliminar y asignar un determinado número de usuarios de manera directa para el acceso a la BANCA EMRPESAS, así como a los servicios y/o atributos (perfiles) transaccionales para cada uno de estos usuarios dentro de las condiciones pactadas con el Banco para este canal. Para tal efecto, el CLIENTE podrá autorizar a una persona (superusuario) de su confianza para la administración directa de usuarios, por lo que en tal sentido acepta y reconoce su absoluta responsabilidad sobre el uso y administración de este servicio del canal Banca Empresas. Cabe destacar que estas acciones las podrá realizar el superusuario luego de que el CLIENTE solicite el servicio al BANCO."+ "\n\n" +
+
+"<style isBold='true'>2.8.1.2.</style> El Cliente reconoce y acepta que  los servicios prestados a través del canal BANCA EMPRESAS solo podrán ser prestados por el BANCO, si los equipos y sistemas del Cliente, utilizados para acceder a la plataforma tecnológica y demás software, son compatibles con los sistemas de EL BANCO. "+ "\n\n" +
+
+"<style isBold='true'>2.8.1.3.</style> Para tener acceso a los servicios a través del canal BANCA EMPRESAS el CLIENTE y las personas debidamente autorizadas por el Cliente deberá utilizar un usuario y clave u otros mecanismos de autentificación determinados por el BANCO para el servicio BANCA EMPRESAS para mayor seguridad del CLIENTE, los mismos que serán debidamente notificados por el BANCO."+ "\n\n" +
+
+"<style isBold='true'>El DISPOSITIVO ELECTRÓNICO DE SEGURIDAD \"SOFTOKEN\"</style> es un mecanismo de seguridad complementario, generador de claves dinámicas sincronizadas que evita el envío de claves a través de medios de comunicación tipo email y SMS que pueden ser interceptados por terceros, aumentando el  nivel de seguridad del canal BANCA EMPRESAS.  "+ "\n" +
+"El Cliente podrá solicitar de manera expresa al Banco, para el uso de los usuarios de acuerdo a su instrucción un Software de Generación de Claves Dinámicas \"SOFTOKEN\" a través de una aplicación tecnológica a ser instalada en un dispositivo electrónico (smartphone, tablet o computador).   Para el efecto El CLIENTE, de manera expresa suscribirá uno de los ANEXOS OPERATIVOS BANCA EMPRESAS mediante el cual instruye al Banco la entrega de este dispositivo de seguridad adicional e instruirá los usuarios que deben contar con este sistema para contar con proceso de seguridad adicional en la prestación de los servicios por el canal  BANCA EMPRESAS. "+ "\n" +
+"El Cliente será el único responsable de las instrucciones de entrega de claves que sean emitidas al Banco, así como de la custodia del sistema SOFTOKEN, cuyo uso, manejo y mantenimiento en estricta reserva y confidencialidad son de exclusiva responsabilidad del Cliente. El Banco queda eximido de toda responsabilidad nacida del uso del sistema SOFTOKEN en cualquier circunstancia, o del cumplimiento de cualquiera de las instrucciones emitidas a través del uso indebido del sistema SOFTOKEN."+ "\n" +
+"En caso de que el cliente, instruyera al Banco, el uso del aplicativo SOFTOKEN el Banco entregará al CLIENTE y a cada uno de sus usuarios aprobadores un PIN para sincronizar el aplicativo, con el sistema de BANCA EMPRESAS.  Si el cliente solicita y acepta este servicio, se compromete a cancelar el costo del aplicativo SOFTOKEN por cada licencia de usuario, en las mismas condiciones establecidas en el presente contrato y sus ANEXOS OPERATIVOS BANCA EMPRESAS. "+ "\n" +
+"El Cliente acepta y reconoce, que al ser el SOFTOKEN una aplicación que puede ser instalada en un dispositivo electrónico de fácil transportación o manejo, el Cliente será responsable de notificar inmediatamente al Banco de la pérdida o robo de cualquiera de los dispositivos que tengan acceso a la aplicación, con el objeto de que el Banco elimine el acceso al sistema SOFTOKEN del usuario del dispositivo notificado.   Para que el Usuario correspondiente vuelva a tener acceso al aplicativo SOFTOKEN el Cliente deberá solicitar por escrito al Banco la generación de un nuevo código de acceso al  aplicativo.  La notificación señalada en este párrafo, podrá ser realizada vía correo electrónico, pero deberá ser regularizada en el plazo de 48 horas mediante comunicación escrita, dirigida al Banco.  En el caso de que el Banco no sea notificado de la pérdida o sustracción del dispositivo, y en el caso de que se haya cumplido una instrucción del Usuario de dicho dispositivo, el Banco no será responsable de la instrucción cumplida.   El Cliente deberá regularizar la notificación mediante un documento escrito en un plazo máximo de 48 horas de enviado el correo electrónico, en el cual se solicite un nuevo acceso al Usuario correspondiente."+ "\n\n" +
+
+"<style isBold='true'>2.8.1.4.</style> Al recibir las instrucciones, el Banco procesará las transacciones instruidas y las archivará en el medio o dispositivo que escoja el Banco. En el caso de que no se hubiera cumplido la instrucción emitida por el Cliente, por la falta de algún requisito necesario para su procesamiento, el Banco lo notificará al Cliente por la misma vía. "+ "\n\n" +
+
+"<style isBold='true'>2.8.1.5.</style> Si al utilizar la BANCA EMPRESAS los Usuarios  registrados por el CLIENTE, ingresaren de manera incorrecta las CLAVES DE ACCESO, y se llegare a bloquear la misma, el Cliente acepta que ese usuario, no podrá tener acceso a la BANCA EMPRESAS hasta reactivar su clave y/ usuario de acuerdo a los procedimientos que el Banco mantiene para el efecto y que serán previamente informados al Cliente.  "+ "\n" +
+"En caso de que las instrucciones emitidas por el CLIENTE sean incorrectas y mediante la PLATAFORMA ELECTRÓNICA no se logra realizar la acreditación a la cuenta instruida, el BANCO, deberá restituir los valores debitados al CLIENTE, dentro delos 3 días hábiles siguientes de haberse producido el débito.  Sin embargo en el caso de que por error en las instrucciones emitidas por el CLIENTE, se realizara una acreditación errónea, no será responsabilidad del BANCO el restituir valor alguno al CLIENTE."+ "\n\n" +
+
+"<style isBold='true'>2.8.1.6.</style> El BANCO entregará, a solicitud del CLIENTE, cualquier copia de retenciones y/o cualquier documento que se genere en el cumplimiento de la prestación de los servicios a través del canal BANCA EMPRESAS,  para lo cual el CLIENTE tendrá hasta 60 días a partir de la emisión del mismo."+ "\n\n" +
+
+"<style isBold='true'>2.8.1.7.</style> En el servicio Banca Empresas Pago Nómina mediante la emisión de Tarjetas de Débito, el BANCO entregará al CLIENTE y/o funcionario autorizado por este para el efecto, las mencionadas tarjetas con sus respectivas claves, en sobre de seguridad, para que el CLIENTE y/o funcionario autorizado por este se responsabilice de la entrega a cada titular y/o beneficiario. En caso de pérdida o robo de un o más tarjetas antes de ser entregadas a su beneficiario el CLIENTE se obliga a informar oportunamente al BANCO y a suspender el pago de las tarjetas de débito, tan pronto tenga conocimiento de robo, extravío o anulación de las tarjetas emitidas mediante la plataforma electrónica de servicios BANCA EMPRESAS, en consecuencia el CLIENTE asume la responsabilidad derivada por la suspensión de pago de dicha (s) tarjeta (s). "+ "\n\n" +
+
+"<style isBold='true'>2.8.2.	 INSTRUCCIONES MENSAJES VIA SMS</style>.- El BANCO enviará notificaciones vía mensajes de texto al teléfono celular del CLIENTE, para notificar accesos, transacciones o recepción de instrucciones por parte del CLIENTE. Entre las notificaciones que podrá recibir el CLIENTE mediante este servicio, están las notificaciones definidas por el organismo de control como básicas y otras especiales para el monitoreo de los movimientos de sus cuentas, así como de su situación financiera (saldos, consultas, bloqueos, etc.)"+ "\n\n" +
+
+"<style isBold='true'>2.8.2.1.</style> Para el envío y recepción de mensajes sms, el CLIENTE deberá enviar un mensaje al código 3600, indicando la consulta que va a efectuar a través de palabras claves, que se detallan en el cuadro que consta a continuación. La contestación del BANCO será la que corresponde a dichas palabras clave, también descrita en el cuadro, que se referirá siempre a la cuenta principal del CLIENTE. El BANCO queda plenamente facultado para cambiar el código de acceso o las palabras clave, para eliminar cualquier consulta del servicio, o para aumentarla, para lo cual el BANCO notificará dicho cambio al CLIENTE. En el último caso, se entenderá que, si el CLIENTE utiliza la nueva consulta, la prestación del servicio queda sometida a las mismas condiciones establecidas en este Contrato."]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupCapitulo2Tabla">
+		<groupHeader>
+			<band height="204">
+				<image scaleImage="FillFrame">
+					<reportElement x="30" y="3" width="499" height="127" uuid="7359d959-b2d9-423c-9f0c-4501144d25dd"/>
+					<imageExpression><![CDATA[$P{IMG_DIR}+ "tabla.jpg"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="29" y="135" width="501" height="20" uuid="c42e7f1e-b1f0-44f1-88cb-f4acca43ff2f"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Será responsabilidad del CLIENTE activar el servicio con el proveedor de telefonía celular que haya escogido."+ "\n\n" +
+
+"El BANCO podrá incrementar el tipo de notificaciones en virtud de diferentes servicios o productos que se vayan generando. "+ "\n\n" +
+
+"<style isBold='true'>2.9.	OBLIGACIONES Y RESPONSABILIDADES DEL BANCO Y DEL CLIENTE SOBRE CANALES ELECTRÓNICOS</style>.-. Sin perjuicio de las Obligaciones y Responsabilidades que se determinan a lo largo de este instrumento y en la normativa vigente, son obligaciones y responsabilidades del BANCO y del CLIENTE, las siguientes:"+ "\n\n" +
+
+"Obligaciones del BANCO:"+ "\n" +
+"- El BANCO se obliga a poner a disposición del CLIENTE los CANALES ELECTRÓNICOS de acuerdo a  las condiciones y características establecidas en el presente contrato, así como a informar cualquier cambio que se genere o se aplique a los mismos, el BANCO podrá en el futuro extender sus servicios a otros CANALES ELECTRÓNICOS, los cuales una vez utilizados por el CLIENTE se entenderá que dicha prestación queda sometida a las mismas condiciones establecidas en este Contrato."+ "\n" +
+"- El BANCO se obliga a mantener y establecer las seguridades necesarias en sus sistemas electrónicos, electromecánicos o de telefonía que permiten el acceso al CLIENTE para la prestación de sus servicios a través de los CANALES ELETRONICOS. El BANCO estará obligado a realizar las investigaciones, que éste considere pertinentes, para comprobar la validez de las INSTRUCCIONES que el CLIENTE haya notificado o manifestado que no hubieran sido realizadas por él."+ "\n" +
+"- La TARJETA es de propiedad del BANCO al igual que el acceso a los CANALES ELECTRÓNICOS según corresponda. Cuando el BANCO considere que se podría causar perjuicios al CLIENTE, a terceros o al BANCO, sea por falta de cumplimiento de las condiciones establecidas en este contrato, como de las establecidas en los sistemas puestos a disposición del CLIENTE, podrá negar el acceso a los CANALES ELECTRÓNICOS o negar las INSTRUCCIONES emitidas."+ "\n" +
+"- Informar al Cliente de cualquier cambio en la operativa o en la forma de manejar los CANALES ELECTRÓNICOS para que el CLIENTE pueda adoptar las medidas del caso en forma oportuna."+ "\n" +
+"- Las demás que se establezcan en el presente contrato y sus anexos según corresponda."+ "\n\n" +
+
+"Obligaciones del CLIENTE:"+ "\n\n" +
+
+"- El CLIENTE es responsable exclusivo y único por la custodia y manejo de su TARJETA, claves o demás factores de autentificación, ya que ellos constituyen los elementos, tanto de acceso a los medios tecnológicos del BANCO, como de verificación de la identidad del CLIENTE, y de comprobación de la autenticidad de las INSTRUCCIONES. Si una persona distinta al CLIENTE hace uso de aquellos elementos entregados al CLIENTE, y el CLIENTE no ha notificado la sustracción, destrucción o pérdida de la TARJETA, se entenderá, sin lugar a cuestionamiento alguno, que dicha persona ha actuado autorizada por el CLIENTE y bajo la absoluta y total responsabilidad del CLIENTE, el BANCO no está en obligación de realizar verificaciones adicionales a las seguridades que mantienen los CANALES ELECTRÓNICOS  (determinadas por la normativa vigente para cumplir con las INSTRUCCIONES recibidas por el CLIENTE"+ "\n" +
+"- Cuidar que las instrucciones que emita mediante los CANALES ELECTRÓNICOS al Banco cumplan con las exigencias previstas en este Contrato, teniendo en cuenta que el Banco procesará las instrucciones del Cliente, siempre que cumpla con los requerimientos establecidos. "+ "\n" +
+"- El CLIENTE asume en forma total y exclusiva la responsabilidad íntegra por las INSTRUCCIONES efectuadas a través de los CANALES ELECTRÓNICOS y libera expresamente al BANCO por la ejecución de tales INSTRUCCIONES, excepción hecha, únicamente, del caso en que el CLIENTE haya notificado al BANCO con la perdida y sustracción de las CLAVES DE ACCESO, TARJETA u otros factores de autentificación y/o solicitado el bloqueo de los CANALES ELECTRÓNICOS, de acuerdo a lo establecido en el presente contrato o por el BANCO para el efecto, y antes de que sus INSTRUCCIONES hayan sido aceptadas. "+ "\n\n" +
+
+"- El CLIENTE reconoce que es de su exclusiva responsabilidad el uso y cuidado prolijo que tenga de la TARJETA y/o claves u otros factores de autentificación, y de aquella información relacionada con las mismas."+ "\n\n" +
+
+"- El CLIENTE conoce que cualquier cambio en la información que haya entregado al BANCO a la suscripción de este contrato, o que se haya entregado para operar los CANALES ELECTRÓNICOS, deberá ser notificado de manera inmediata al BANCO, así como cualquier pérdida, sustracción o deterioro de la TARJETA, CLAVES DE ACCESO u otros medios de autentificación."+ "\n\n" +
+
+"- El CLIENTE estará obligado a informar al BANCO oportunamente, sobre los hechos y acontecimientos que mediante el uso de los CANALES ELECTRÓNICOS pudieran causar perjuicio, así mismo al BANCO o a terceras personas."+ "\n\n" +
+
+"- El CLIENTE reconoce que podrá hacer transferencias o emitir sus INSTRUCCIONES únicamente mediante los CANALES ELECTRÓNICOS entre los cuales no se establece el correo electrónico. "+ "\n\n" +
+
+"- El CLIENTE adicional a la declaración de licitud de fondos, que realiza a la suscripción de este contrato, deberá justificar la licitud de los fondos de su(s) cuentas cuando así lo requieran el BANCO, cualquier entidad o autoridad de control o de oficio cuando los montos de las transacciones a través de los CANALES ELECTRÓNICOS, superen o igualen los límites dispuestos por la normativa vigente."+ "\n\n" +
+
+"<style isBold='true'>2.10.	DERECHOS DEL CLIENTE</style>.- Sin perjuicio de los Derechos que se determinan a lo largo de este instrumento y en la normativa vigente, son derechos del CLIENTE, las siguientes: "+ "\n\n" +
+
+"- El CLIENTE tendrá como parte del centro de atención telefónica del Banco (contact center) un acceso directo para reportar emergencias bancarias durante  las  veinticuatro (24) horas del día, los siete (7) días de la semana. El Banco podrá habilitar otros  CANALES ELECTRÓNICOS para el efecto, con los mismos horarios."+ "\n\n" +
+
+"- El Banco suspenderá cualquier cargo o pago por cuenta del CLIENTE en los CANALES ELECTRÓNICOS  a partir de la notificación de la pérdida, sustracción, robo o hurto de su TARJETA, claves u otros motivos que el cliente considere."+ "\n\n" +
+
+"- El BANCO enviará al CLIENTE mensajes en línea a través de mensajería móvil, correo electrónico u otro mecanismo autorizado por la autoridad competente o normativa vigente, notificando el acceso y la ejecución de transacciones realizadas mediante cualquiera de los canales electrónicos disponibles o por medio de la TARJETA.   "+ "\n\n" +
+
+"- Las tarjetas que el BANCO ofrezca al CLIENTE serán tarjetas inteligentes, las cuales contarán con microprocesador o chip o con las seguridades o tecnología que la normativa vigente establezca para el efecto."+ "\n\n" +
+
+"<style isBold='true'>2.11.	DECLARACIONES ESPECIALES PARA CANALES ELECTRÓNICOS</style>.- El CLIENTE declara:"+ "\n" +
+"<style isBold='true'>2.11.1.</style>	 Conocer plenamente los riesgos, contingencias, naturaleza jurídica, alcance y significado de las INSTRUCCIONES que emitirá mediante los CANALES ELECTRÓNICOS y de las TRANSACCIONES que deban ejecutarse en virtud de aquéllas.  En tal virtud asume toda la responsabilidad en la integridad y veracidad de la información entregada o enviada al BANCO a través de los CANALES ELECTRÓNICOS. De igual manera, declara que conoce que todas las transacciones que efectúe el BANCO en cumplimiento de las INSTRUCCIONES emitidas en virtud de las disposiciones contenidas en el presente contrato, serán por exclusiva cuenta y riesgo del CLIENTE, siempre y cuando no haya notificado al BANCO la pérdida, destrucción o sustracción de la TARJETA y/o CLAVES u otros mecanismos de accesos de acuerdo a lo establecido en el  presente contrato, o a menos que pueda demostrar legalmente que los CANALES ELECTRÓNICOS hayan sido violentados o alterados por terceros o que  el BANCO haya procedido con culpa grave o dolo."+ "\n" +
+"<style isBold='true'>2.11.2.</style>	Que proveerá al BANCO de los fondos necesarios para cubrir el pago de las transacciones que deban realizarse en virtud de sus INSTRUCCIONES. Se entenderá que el CLIENTE ha provisto al BANCO de los fondos necesarios, únicamente cuando ellos hayan sido efectivizados. En caso de que no se produzca tal efectivización, y ya se hubiere ejecutado la transacción instruida, el BANCO queda facultado para cancelarla o reversarla inmediatamente, asumiendo el CLIENTE todos los cargos derivados de dicha cancelación o reverso, sin que sea necesaria autorización alguna de parte del CLIENTE. El BANCO podrá incumplir o rechazar una INSTRUCCIÓN emitida por el CLIENTE, cuando éste no cuente con los fondos suficientes en su cuenta para cumplir con dicha  INSTRUCCIÓN, no será obligación del BANCO sobregirar la cuenta o cuentas para dar cumplimiento a las INSTRUCCIONES emitidas.  "+ "\n" +
+"<style isBold='true'>2.11.3.</style>	Ha sido informado y acepta que el BANCO estará en imposibilidad de la prestación de sus servicios a través de los CANALES ELECTRÓNICOS contratados, cuando se presentaren situaciones ajenas a su control de tipo técnico, tecnológico y otras relacionadas con casos fortuitos o de fuerza mayor, sin que esto genere indemnización alguna a favor del CLIENTE."+ "\n\n" +
+
+"<style isBold='true'>2.12.	HORARIO DE UTILIZACIÓN DE LOS CANALES ELECTRÓNICOS</style>.- El CLIENTE podrá hacer uso de los CANALES ELECTRÓNICOS dentro del horario que el BANCO establezca para el efecto.- El BANCO no se hace responsable por daño o perjuicio alguno que se ocasionare al CLIENTE, como consecuencia de que los canales tecnológicos, electrónicos o telemáticos no se encontraren disponibles o que por motivos de seguridad del CLIENTE, de terceros o del BANCO, se negare a prestar el servicio solicitado por el CLIENTE. El CLIENTE deberá sujetarse a las instrucciones impartidas por el BANCO, en todo cuanto se refiere a la forma de utilización de los CANALES ELECTRÓNICOS.  El CLIENTE podrá utilizar los CANALES ELECTRÓNICOS en los términos en que los esté prestando el BANCO al momento de tal utilización. El BANCO podrá ampliar o restringir los CANALES ELECTRÓNICOS, comunicando previamente al CLIENTE dentro de los plazos establecidos por la norma aplicable, para el caso de nuevos canales esto se lo hará previa autorización del ente de control. El CLIENTE reconoce que las INSTRUCCIONES ingresadas o emitidas en un día, no necesariamente se realizarán el mismo día, sino en fecha posterior."+ "\n" +
+"El BANCO y El CLIENTE acuerdan que de producirse fallas en los CANALES ELECTRÓNICOS o por fuerza mayor o caso fortuito, de acuerdo a lo establecido en el Código Civil, que no permita cumplir con las instrucciones emitidas, en la fecha y horario establecidos, EL BANCO no tendrá responsabilidad alguna para Terceros que generen reclamos o acciones laborales, judiciales o de cualquier naturaleza."+ "\n\n" +
+
+"<style isBold='true'>2.13.	TRANSACCIONES OPERATIVA</style>.- Cuando el CLIENTE efectúe una TRANSACCION, según corresponda,  en uso de los CANALES ELECTRÓNICOS, los débitos, créditos u otras afectaciones a sus Cuentas, se reflejarán en el estado de cuenta con la referencia de la TRANSACCION. El BANCO no será responsable de la falta de ejecución de una transacción, cuando el CLIENTE no la hubiere emitido correctamente, o cuando no dispusiere de fondos para ejecutarla. "+ "\n" +
+"El BANCO tendrá derecho de debitar los valores adeudados por el CLIENTE, directamente de la cuenta o de cualquier otra inversión o producto de las que éste fuera titular, así como a tomar las sumas necesarias para ello de cualquier otro valor que éste mantenga en el BANCO a cualquier título. "+ "\n\n" +
+
+"<style isBold='true'>2.14.	NOTIFICACIONES</style>: A efectos de la recepción y envío de cualquier notificación relacionada con el cumplimiento o aplicación del presente contrato, el CLIENTE señala como datos de contacto y notificación los siguientes: "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="29" y="160" width="66" height="20" uuid="6d764a51-0b5b-48ab-8e70-ae4672118400">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Celular No.: "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="29" y="184" width="501" height="20" uuid="40230e5c-1adf-4aa6-be99-9f8536150b72">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Dirección de correo electrónico:  " + $P{textoCorreo} + "\n\n" +
+
+"Cualquier cambio realizado a la información aquí proporcionada, deberá ser notificado por el CLIENTE al BANCO en un plazo máximo de 48 horas a partir del cambio.  Si por falta de notificación, el BANCO continuara efectuando las notificaciones al número celular correo electrónicos anterior, el CLIENTE no podrá exigir al BANCO el reembolso o devolución de costo alguno, por notificaciones incorrectas.  Sin embargo en el caso de que el CLIENTE demostrara que realizó la notificación formal y por escrito, del cambio de número celular o correo electrónico al BANCO, y no se realizó operativamente el mismo, el CLIENTE podrá exigir al BANCO la restitución del costo del servicio prestado al número o correo electrónico incorrecto. Queda expresamente establecido que las notificaciones que efectúe el BANCO, en la prestación de estos SERVICIOS y en cumplimiento a lo establecido en este contrato  son para comunicar al CLIENTE sobre la información que se maneja o se encuentra en su(s) cuenta(s) y por lo tanto el BANCO no tendrá responsabilidad más allá que el transmitir la información del CLIENTE."+ "\n\n" +
+
+"<style isBold='true'>2.15.</style>	El BANCO se reserva el derecho de grabar, a su criterio, las llamadas telefónicas que el CLIENTE realice a su Contact Center. "+ "\n\n" +
+
+"<style isBold='true'>2.16.</style>	Las normas y declaraciones especiales relacionadas con la Ley de Comercio Electrónico, constan en el Anexo “2” que forma parte integrante de este contrato. De igual manera, las instrucciones para navegación, recepción y envío de mensajes escritos de consultas a través de teléfonos celulares, se consideran incorporadas al presente contrato. "+ "\n\n" +
+
+"<style isBold='true'>2.17.</style>	El CLIENTE podrá notificar o consultar sobre cualquier asunto relacionado con las TRANSACCIONES y servicios prestados a través de los CANALES ELECTRÓNICOS, en cualquiera de las oficinas del BANCO a nivel Nacional."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="213" y="160" width="41" height="20" uuid="085e017b-b1d8-44e3-a60f-316335a9ae72">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Claro"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="286" y="160" width="54" height="20" uuid="c81059ee-fcb8-4d8a-8b7c-80d68b92fa0d">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Movistar"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="372" y="160" width="34" height="20" uuid="82c865a0-8eaf-4ba4-821c-2ac8f8674e2f">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["CNT"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="255" y="160" width="21" height="20" uuid="1cee81c8-0f4e-46d0-b8ed-010314245730">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{textoOprClaro}.equals("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="343" y="160" width="21" height="20" uuid="03d6d66e-e964-49c7-a4f2-f9b9a8d01880">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{textoOprMovistar}.equals("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="407" y="160" width="21" height="20" uuid="dcc4cafa-0576-4d44-83b7-21a20da3e315">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{textoOprCnt}.equals("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="96" y="160" width="114" height="20" uuid="b6d1c586-ce49-415a-a8e3-eba3b7350713">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{textoNroCelular}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupCapitulo3">
+		<groupHeader>
+			<band height="215">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<staticText>
+					<reportElement positionType="Float" x="28" y="4" width="501" height="18" uuid="94eccd74-af73-4b64-927a-ec082da3cd26"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[3.	CAPITULO III: GENERALIDADES]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="28" y="26" width="501" height="20" uuid="ef4d6471-f372-4063-b4cf-48a080cd0bac"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold='true'>3.1.	DECLARACIONES GENERALES</style>.- EL CLIENTE acepta de manera expresa que ha sido informado y conoce que todo lo estipulado en el presente contrato aplica de manera general para todos los productos y servicios que este contrate con el BANCO, aceptando que todo instrumento o documento que celebre con el BANCO se entenderá incorporadas las disposiciones del presente contrato, razón por la cual no podrá alegar desconocimiento de su parte respecto del contenido del mismo. "+ "\n" +
+"De igual manera acepta que ha sido informado que los CANALES ELECTRÓNICOS a los cuales se refiere el Capítulo dos de este contrato aplicarán de acuerdo a los productos y/o servicios que el CLIENTE vaya solicitando y contratando con el BANCO de manera independiente, de conformidad con lo que aplique a cada producto y/o servicio según lo determinado en el presente contrato, normativa vigente y políticas del BANCO. "+ "\n" +
+"En los casos que aplique, el CLIENTE declara que conoce y autoriza al Banco la retención de los valores por concepto de obligaciones tributarias que se generen con motivo de la ejecución de los contratos de productos y/o servicios que llegaren a convenir las partes y, en cualquier caso, por lo tanto declara y acepta que el presente contrato y los instrumentos particulares que suscriban las partes quedan sometidos a las normas tributarias vigentes, salvo que el Cliente demuestre a satisfacción del Banco con la documentación legal respectiva que se encuentra exonerado de tales retenciones u obligaciones tributarias."+ "\n\n" +
+
+"<style isBold='true'>3.2.	DECIMA CUARTA</style>.- TARIFAS Y COSTOS: El CLIENTE declara que se le ha entregado y conoce el Tarifario de servicios publicado por el BANCO para la prestación de sus servicios financieros el mismo que cumple con las disposiciones emitidas por el ente de control.  El CLIENTE declara que conoce que estos cargos (tarifas) son los que rigen al momento de celebrar el presente contrato y que pueden variar en el futuro de acuerdo a las normas y circunstancias aplicables. En caso de existir modificaciones de estos costos o cargos, el BANCO comunicará del particular al CLIENTE, en la forma y con la antelación que determine la norma aplicable. Los valores a que se refiere esta cláusula serán debitados de la(s) cuenta(s) o tarjeta de crédito u otros productos contratados por el CLIENTE con el BANCO sobre las cuales se realicen las TRANSACCIONES de acuerdo a las INSTRUCCIONES formuladas por el Cliente; y, en caso de que por cualquier motivo no existan los fondos necesarios para honrar con las respectivas obligaciones, faculta expresamente a Banco Internacional S.A. que procede con el débito correspondiente en las cuentas u otros productos que El CLIENTE mantenga en el BANCO "+ "\n" +
+"El CLIENTE declara que conoce y acepta los costos establecidos por el BANCO por la prestación de los servicios a través de los CANALES ELECTRÓNICOS constan el Tarifario de servicios y cargos del BANCO."+ "\n\n" +
+
+"<style isBold='true'>3.3.	JURISDICCIÓN Y PROCEDIMIENTO</style>.- Para todos los efectos que se deriven del presente documento, las partes renuncian domicilio y se someten a los jueces de la ciudad de " + $P{textoCiudadSuscribeContrato}+",  o en la ciudad que el BANCO determine y al Procedimiento Sumario. "+ "\n\n" +
+
+"<style isBold='true'>3.4.	PLAZO Y TERMINACIÓN</style>: Este contrato es de plazo indefinido. Sin embargo el CLIENTE entiende y acepta que los productos y/o servicios contratados con el Banco tienen carácter de esencial para su vigencia y que será causal de terminación anticipada del presente contrato la terminación de todos los contratos particulares por producto que el CLIENTE suscriba con el Banco. "+ "\n" +
+"La terminación de este contrato no se podrá realizar sin que previamente se hayan dado por terminado o cancelado la totalidad de los productos y/o servicios u operaciones contratados por el CLIENTE con el Banco."+ "\n" +
+"La terminación del Contrato no significará anulación, solución, terminación o modificación de ninguna de las obligaciones que tuviere a favor del BANCO o de otros convenios de servicios o productos financieros que tuviere contratado el CLIENTE con el BANCO."+ "\n\n" +
+
+"<style isBold='true'>3.5.	ACEPTACION  Y ENTREGA</style>: Las partes aceptan y se ratifican en cada una de las cláusulas del presente contrato, del cual se entrega un ejemplar al  Cliente quien declara haberlo recibido a satisfacción. "+ "\n\n" +
+
+"En fe de conformidad con lo acordado, firman las partes en " + $P{textoCiudadSuscribeContrato} + ", " + $V{var_fecha} + "."]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="89" y="74" width="193" height="12" uuid="dc892ec5-74d5-4f54-b402-796ba04609bc"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{cabecera_nombre_banco}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement positionType="Float" x="51" y="122" width="198" height="1" uuid="eca828ad-1361-4548-b0de-2baa7cef5392"/>
+				</line>
+				<staticText>
+					<reportElement positionType="Float" x="58" y="74" width="32" height="12" uuid="51e8912d-37ab-4bd7-a008-464546983e2d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="10"/>
+					</textElement>
+					<text><![CDATA[Por el]]></text>
+				</staticText>
+				<image scaleImage="FillFrame">
+					<reportElement positionType="Float" x="95" y="88" width="105" height="33" uuid="401a49ea-c74e-4344-bd02-33017ad4b704"/>
+					<imageExpression><![CDATA[$P{IMG_DIR}+ "firma.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement positionType="Float" x="114" y="122" width="68" height="24" uuid="6815fcb7-d119-4456-b77e-9904121ea4e9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Firma]]></text>
+				</staticText>
+				<subreport>
+					<reportElement positionType="Float" x="30" y="167" width="498" height="33" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="9c94657e-cfff-4daa-9ead-f9bde4d45f3d">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{repLegalesListExcluyendoElPrimero})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subRptFirmasRepresentantesLegales.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport>
+					<reportElement positionType="Float" x="310" y="102" width="218" height="33" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="adaf3a66-a30f-4ddf-9d77-bc190ecd3ec5">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{repLegalesList})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subRptPrimerFirmaRepresentanteLegal.jasper"]]></subreportExpression>
+				</subreport>
+				<staticText>
+					<reportElement positionType="Float" x="329" y="74" width="91" height="12" uuid="0a1df45b-efe8-486a-851a-38161b5da90b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="10"/>
+					</textElement>
+					<text><![CDATA[El CLIENTE:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="380" y="0" width="151" height="40" uuid="6f9ac842-1f2b-46ad-8de5-eed81803e972"/>
+				<imageExpression><![CDATA[$P{IMG_DIR}+ "logo_baninter_reporte.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="30" y="40" width="501" height="18" uuid="7807132d-a17c-4fa1-bfb4-c7d328374156"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTRATO DE VINCULACIÓN DE CLIENTES ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement positionType="Float" x="32" y="62" width="497" height="20" uuid="8ecac1e0-f919-41be-9a03-5340c71f6892"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>INTERVINIENTES</b>.- Intervienen: por una parte el " + $P{cabecera_nombre_banco} + " (en adelante \"El Banco\"), representado por el funcionario que suscribe este contrato; y por otra la Compañía " + $P{cabecera_nombres_cliente}.toString().trim() + ". representada por su(s) Representante(s) Legal(es), quien(es) legal y debidamente autorizados y/o facultados para el efecto, en señal de pleno conocimiento y aceptación, suscriben el presente contrato, (en adelante \"El Cliente\")." + "<br><br>" +
+"<b>ANTECEDENTES</b>.- EL CLIENTE ha solicitado su vinculación como cliente del BANCO, a cuyo efecto declara que los siguientes son sus datos relevantes:" + "<br><br>" +
+"<b>DATOS GENERALES</b>"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="9">
+			<textField>
+				<reportElement x="32" y="0" width="35" height="9" uuid="52dae94a-fb8e-46da-974c-1935cfcdf033">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pag. " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="54" y="0" width="25" height="9" uuid="2b8972a8-851e-44a5-b496-96027515d7ca">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="0" width="144" height="9" uuid="03b60d6b-040c-46fe-bba2-dc3dccd6430a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new java.text.SimpleDateFormat("dd 'de' MMMMM 'de' yyyy",new Locale("es", "ES"))).format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

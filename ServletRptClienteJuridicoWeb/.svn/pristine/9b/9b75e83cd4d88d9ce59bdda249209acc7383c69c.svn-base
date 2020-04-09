@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-12-02T11:48:06 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="detalles" pageWidth="565" pageHeight="40" columnWidth="565" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c1b30545-747c-45ba-8add-0587e243f657">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="REPORT_PATH" class="java.lang.String">
+		<defaultValueExpression><![CDATA["/home/pablo/proyectos/baninter/reporte-actualizacion-cliente-juridico/reportes/MyReports"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="etiqueta" class="java.lang.String">
+		<fieldDescription><![CDATA[etiqueta]]></fieldDescription>
+	</field>
+	<field name="valor" class="java.lang.String">
+		<fieldDescription><![CDATA[valor]]></fieldDescription>
+	</field>
+	<field name="actualizado" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[actualizado]]></fieldDescription>
+	</field>
+	<field name="contenido" class="ec.com.bancoInternacional.reporte.actualizacionclientejuridico.Contenido">
+		<fieldDescription><![CDATA[contenido]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="563" height="23" uuid="ff86971f-2272-4660-a008-d4ababa59f4f"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="0" y="0" width="121" height="21" uuid="d6baba9f-5fcc-4a2f-8867-6968ae01aaa4">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a8585b9f-4094-44a1-9ab1-619dc04ea950"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Calibri" size="11" isBold="false" isItalic="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{etiqueta}]]></textFieldExpression>
+				</textField>
+				<subreport>
+					<reportElement x="121" y="0" width="195" height="23" uuid="7208c3bc-cb6a-4880-a438-5eec22c32799">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<subreportParameter name="valores">
+						<subreportParameterExpression><![CDATA[$F{contenido}.getValores()]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REPORT_PATH">
+						<subreportParameterExpression><![CDATA[$P{REPORT_PATH}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{REPORT_PATH} + "/" + $F{contenido}.getNombreReporte() + ".jasper"]]></subreportExpression>
+				</subreport>
+				<textField>
+					<reportElement positionType="Float" x="341" y="6" width="12" height="12" uuid="8a8897e2-ef2e-472a-93d0-c52ef20f95af"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{actualizado}?"":"X"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="Float" x="318" y="6" width="12" height="12" uuid="0e2813b6-8fd9-4061-9224-22e6df5e3155"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{actualizado}?"":""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="330" y="1" width="11" height="21" uuid="907b6bf8-d4f6-47cb-b58f-6421982fa2e2">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[SI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="354" y="1" width="13" height="21" uuid="fc51345c-c82d-452b-ba27-173923752eda">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[NO]]></text>
+				</staticText>
+				<subreport>
+					<reportElement x="367" y="0" width="195" height="23" uuid="3a6b28c8-a34c-421d-95da-8404a2ec73d9">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<subreportParameter name="valores">
+						<subreportParameterExpression><![CDATA[$F{contenido}.getValores()]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="emptyBox">
+						<subreportParameterExpression><![CDATA[true]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="actualizado">
+						<subreportParameterExpression><![CDATA[$F{actualizado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{REPORT_PATH} + "/" + $F{contenido}.getNombreReporte() + ".jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

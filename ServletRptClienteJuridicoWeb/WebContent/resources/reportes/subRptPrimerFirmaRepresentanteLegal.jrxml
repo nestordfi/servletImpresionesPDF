@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-12-02T16:34:24 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subRptRepresentantesLegales" printOrder="Horizontal" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="5" bottomMargin="5" uuid="c19b0e4d-e3fa-499b-9982-3f533ca6ef1c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<field name="countRepLegales" class="java.lang.Integer"/>
+	<field name="tipoIdentificacion" class="java.lang.String"/>
+	<field name="identificacion" class="java.lang.String"/>
+	<field name="nombres" class="java.lang.String"/>
+	<field name="cargo" class="java.lang.String"/>
+	<field name="vencimientoNombramiento" class="java.lang.String"/>
+	<field name="nacionalidad" class="java.lang.String"/>
+	<field name="fechaNacimiento" class="java.lang.String"/>
+	<field name="estadoCivil" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="celular" class="java.lang.String"/>
+	<field name="correo" class="java.lang.String"/>
+	<field name="identificacionConyugue" class="java.lang.String"/>
+	<field name="nombreConyugue" class="java.lang.String"/>
+	<field name="pais" class="java.lang.String"/>
+	<field name="canton" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="tipoCasa" class="java.lang.String"/>
+	<field name="tipoEdificio" class="java.lang.String"/>
+	<field name="calle" class="java.lang.String"/>
+	<field name="numero" class="java.lang.String"/>
+	<field name="calleSecundaria" class="java.lang.String"/>
+	<field name="piso" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="barrio" class="java.lang.String"/>
+	<field name="referencia" class="java.lang.String"/>
+	<detail>
+		<band height="75" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[new Boolean($F{countRepLegales}.intValue()==1)]]></printWhenExpression>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="44" width="200" height="15" isRemoveLineWhenBlank="true" uuid="bfb8c1e2-84b7-4c4a-b6c3-a84604a689a5">
+					<printWhenExpression><![CDATA[new Boolean($F{countRepLegales}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="3" y="20" width="200" height="1" isRemoveLineWhenBlank="true" uuid="ae9ebb46-8b88-4c02-b407-3af7aa6d2ecb">
+					<printWhenExpression><![CDATA[new Boolean($F{countRepLegales}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="20" width="200" height="20" isRemoveLineWhenBlank="true" uuid="2208bc4d-3470-4c27-9d52-0cecc22166ac">
+					<printWhenExpression><![CDATA[new Boolean($F{countRepLegales}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Firma]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="3" y="64" width="200" height="11" isRemoveLineWhenBlank="true" uuid="e5e212dd-e109-4fea-bf05-ed446b8b8eba">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[new Boolean($F{countRepLegales}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoIdentificacion}+": "+ $F{identificacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

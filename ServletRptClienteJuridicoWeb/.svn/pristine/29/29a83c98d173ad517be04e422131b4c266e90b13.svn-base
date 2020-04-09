@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-12-02T11:53:05 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="detalle" pageWidth="200" pageHeight="50" columnWidth="200" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0ff90311-7431-4b1a-aaa0-7d3fe236ee13">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="valores" class="java.lang.String[]"/>
+	<parameter name="emptyBox" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
+	</parameter>
+	<parameter name="actualizado" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[true]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="10">
+			<printWhenExpression><![CDATA[$P{emptyBox}]]></printWhenExpression>
+			<staticText>
+				<reportElement x="99" y="0" width="99" height="10" uuid="70593472-f29e-4725-aa44-045c989b9022">
+					<printWhenExpression><![CDATA[$P{emptyBox}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Operadora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="99" height="10" uuid="9fc2f839-b73a-4000-b8db-43308f7bd1cc">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{emptyBox}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Número]]></text>
+			</staticText>
+		</band>
+		<band height="17">
+			<rectangle>
+				<reportElement x="0" y="0" width="99" height="17" uuid="1023ddd0-a6bd-4c20-9a66-562fb5e21154">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{emptyBox}]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#E2E2E2"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="99" height="17" uuid="54700c23-9c8f-496b-9400-75321f8bede0">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{emptyBox} && !$P{actualizado}]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="99" y="0" width="99" height="17" uuid="76325049-c59a-4d4c-b003-1392cc5e94ba">
+					<printWhenExpression><![CDATA[$P{emptyBox}]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#E2E2E2"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="99" y="0" width="99" height="17" uuid="0b690f2c-75c4-4b17-8d1b-509791f4797b">
+					<printWhenExpression><![CDATA[$P{emptyBox} && !$P{actualizado}]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="6" width="99" height="8" uuid="9306efad-c8d1-4e1f-8894-287ac54aa486">
+					<printWhenExpression><![CDATA[!$P{emptyBox}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Calibri" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{valores}[0]]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="99" y="6" width="99" height="8" uuid="11e0f1c3-7212-499d-9631-956883a56302">
+					<printWhenExpression><![CDATA[!$P{emptyBox}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Calibri" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{valores}[1]]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

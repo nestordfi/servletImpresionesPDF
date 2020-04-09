@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2018-12-03T12:22:14 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repAnexosClienteJuridico" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4804fbc5-6187-47b9-b06d-d9003474489e">
+	<parameter name="banInterCorreo" class="java.lang.String"/>
+	<parameter name="banInterPostal" class="java.lang.String"/>
+	<parameter name="superBancosCorreo" class="java.lang.String"/>
+	<parameter name="superBancosCasilla" class="java.lang.String"/>
+	<parameter name="superBancosPostal" class="java.lang.String"/>
+	<group name="GroupAnexo1">
+		<groupHeader>
+			<band height="30">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="29" y="7" width="501" height="20" uuid="7d7c8656-fb56-473b-b27d-1651382123b0"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold='true'>Anexo 1</style> "+ "\n\n" +
+   
+"<style isBold='true'>1.	INFORMACIÓN ADICIONAL RELEVANTE:</style> "+ "\n\n" +
+
+"<style isBold='true'>1.1.</style>	De conformidad con la Ley Orgánica de Defensa del Consumidor, se informa al CLIENTE lo siguiente:  "+ "\n\n" +
+
+"- Se prohíbe el establecimiento y cobro de intereses sobre intereses. El cálculo de los intereses en las compras a crédito debe hacerse exclusivamente sobre el saldo del capital impago. Es decir, cada vez que se cancela una cuota, el interés debe ser recalculado para evitar que se cobre el total del capital. "+ "\n\n" +
+
+"- En toda venta o prestación de servicios a crédito, el consumidor tendrá derecho a pagar anticipadamente el total de lo adeudado, o realizar pre-pagos parciales en cantidades mayores a una cuota. En estos casos, los intereses se pagarán únicamente sobre el saldo pendiente. "+ "\n\n" +
+
+"- Constituyen prácticas abusivas de mercado, y están absolutamente prohibidas al proveedor, entre otras, el redondeo de tiempos para efectivizar el cobro de intereses, multas u otras sanciones económicas en tarjetas de crédito, préstamos bancarios y otros similares." + "\n\n" +
+  
+"<style isBold='true'>1.2.</style>	Obligaciones del BANCO para con sus clientes: "+ "\n\n" +
+  
+"a. Las instituciones del sistema financiero quedan prohibidas de establecer cargos por conceptos de prepago total o parcial de las operaciones crediticias. "+ "\n\n" +
+
+"b. La tasa de interés para los créditos es de libre contratación, siempre y cuando sea menor a la máxima efectiva que dispone el Banco Central del Ecuador. "+ "\n\n" +
+
+"c. El deudor del crédito deberá aprobar por escrito en su solicitud el deseo de tomar un producto o servicio ofrecido bajo los costos informados por la entidad. "+ "\n\n" +
+
+"d. A los solicitantes del crédito se les deberá entregar un formulario informativo, en el cual el cliente (deudor) pueda verificar los datos publicados en la información pizarra. "+ "\n\n" +
+
+"e. Los valores por servicios financieros que se presentan como básicos, cargos máximos y diferenciados son determinados y/o autorizados por autoridad competente.  "+ "\n\n" +
+
+"f. Un servicio financiero debe ser efectivamente prestado y deberá tener la aceptación escrita por parte del cliente. "+ "\n\n" +
+
+"g. Las entidades financieras pueden elaborar folletos parciales con mayor detalle de los servicios financieros que ofertan. "+ "\n\n" +
+
+"h. Se deberá informar sobre la existencia de la Unidad de Atención al Cliente, la que tendrá como finalidad brindar mayor información a los clientes, atender y resolver las quejas y reclamaciones presentadas; un defensor del cliente y la oficina de “Atención al cliente” de la Superintendencia d Bancos "+ "\n\n" +
+
+"i. Informar a sus clientes sobre la existencia de la línea telefónica 1800-TARIFA que ha implementado la Superintendencia de Bancos. "+ "\n\n" +
+
+"j. Informar a sus clientes que está vigente la normativa que regula la transparencia de las operaciones financieras y la protección de los usuarios financieros. "+ "\n\n" +
+ 
+"<style isBold='true'>NOTA: El BANCO podrá anexar información detallada de sus productos de captaciones y de colocaciones, destacando las tasas de interés y plazos, una vez que el cliente haya seleccionado el producto.</style> "]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupAnexo1Informacion">
+		<groupHeader>
+			<band height="136">
+				<staticText>
+					<reportElement x="30" y="3" width="139" height="16" uuid="fe083662-2003-4121-852b-bfa6a477384e">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Banco Internacional:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="174" y="20" width="356" height="16" uuid="22d16237-dafa-466c-b47a-dac91735769f"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{banInterCorreo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="20" width="140" height="16" uuid="c1328873-001a-423f-9a4b-62d6c5d3ff99">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Correo Electrónico:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="37" width="140" height="16" uuid="30590131-47b0-4462-b15a-4e66debf3c0c">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Casilla Postal:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="174" y="37" width="356" height="16" uuid="72b53967-0dbb-4ffd-a61d-a17153bb75f8"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{banInterPostal}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="64" width="210" height="16" uuid="d437c464-be2b-4ef2-b87e-3ca609df70d8">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Superintendencia de Bancos.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="81" width="140" height="16" uuid="25d9d5f2-f54d-40d8-a735-86c64e56b56d">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Correo Electrónico:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="174" y="81" width="356" height="16" uuid="9528ab90-200b-49fc-89e2-2d5d17366a14"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{superBancosCorreo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="98" width="140" height="16" uuid="4acdced3-59b8-4011-80d2-a3a6d1f7bfc7">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Teléfono:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="174" y="98" width="356" height="16" uuid="da8e80f8-e4d6-4ead-8ce8-ca44835bbb3e"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{superBancosCasilla}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="115" width="140" height="16" uuid="dcb6badb-4db2-4ba8-981e-831a61ec0255">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Casilla Postal:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="174" y="115" width="356" height="16" uuid="ea8e1360-2799-46af-a157-18c7dfdf5092"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{superBancosPostal}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupAnexo2"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageFooter>
+		<band height="9">
+			<textField>
+				<reportElement x="32" y="0" width="35" height="9" uuid="11ff1229-4c26-43d1-a289-475388c297b4">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pag. " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="54" y="0" width="25" height="9" uuid="a9fa2404-fdae-4f9e-ac61-41f1789f8115">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="0" width="144" height="9" uuid="0276d1ef-894d-46ec-9822-606ff65a95fc">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new java.text.SimpleDateFormat("dd 'de' MMMMM 'de' yyyy",new Locale("es", "ES"))).format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

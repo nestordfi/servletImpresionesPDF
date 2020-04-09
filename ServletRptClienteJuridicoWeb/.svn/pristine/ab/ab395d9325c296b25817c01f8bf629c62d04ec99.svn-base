@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-12-02T10:05:14 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="firmas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d33fea9f-2f83-4979-8a16-fe9789b24f0d">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="identificacion" class="java.lang.String">
+		<fieldDescription><![CDATA[identificacion]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[nombre]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="70" splitType="Stretch">
+			<line>
+				<reportElement x="6" y="24" width="240" height="1" uuid="4a817d9d-e648-4d40-9de0-717fabaeedb1"/>
+			</line>
+			<frame>
+				<reportElement x="24" y="26" width="200" height="44" uuid="d1c200d5-e739-46a7-a717-75a145f7867c"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="0" y="-2" width="200" height="15" uuid="bc5bb423-06c5-4225-b411-fb72ae116041"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="13" width="200" height="15" uuid="88eba21c-cf99-4cd8-a706-5f7abbd937e0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{identificacion}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="16"/>
+	</detail>
+</jasperReport>

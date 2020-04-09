@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ServletContratos">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="ServletContratosEJB.jar" deploy-path="/" handle="module:/resource/ServletContratosEJB/ServletContratosEJB">
+            <dependent-object>Module_1586361617016</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ServletContratosWeb.war" deploy-path="/" handle="module:/resource/ServletContratosWeb/ServletContratosWeb">
+            <dependent-object>Module_1586361633344</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-12-02T11:27:17 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subcabecera" pageWidth="565" pageHeight="400" columnWidth="565" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a9e41bf-f936-4e92-8761-dcffa880039b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="subCabeceras" class="ec.com.bancointernacional.reporte.actualizacionclientejuridico.SubCabecera"/>
+	<parameter name="REPORT_PATH" class="java.lang.String">
+		<defaultValueExpression><![CDATA["/home/pablo/proyectos/baninter/reporte-actualizacion-cliente-juridico/reportes/MyReports"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="imprimible" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[imprimible]]></fieldDescription>
+	</field>
+	<field name="titulo" class="java.lang.String">
+		<fieldDescription><![CDATA[titulo]]></fieldDescription>
+	</field>
+	<field name="detalles" class="java.util.List">
+		<fieldDescription><![CDATA[detalles]]></fieldDescription>
+	</field>
+	<field name="imprimeFondoCeleste" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[imprimeFondoCeleste]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement mode="Opaque" x="0" y="0" width="565" height="20" isRemoveLineWhenBlank="true" backcolor="#F5D5C9" uuid="cd1af076-1f79-4b76-978a-6c3bb40499d2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="59d5fdbb-8878-4cca-b971-a173cc0c5697"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$F{imprimible} && !$F{imprimeFondoCeleste}]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $F{titulo}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="0" y="22" width="565" height="18" isRemoveLineWhenBlank="true" uuid="b7fb56b2-a2dc-484e-9c2c-b14ac935ec6b">
+					<printWhenExpression><![CDATA[!$F{detalles}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="REPORT_PATH">
+					<subreportParameterExpression><![CDATA[$P{REPORT_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{detalles})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{REPORT_PATH} + "/detalles.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isStretchWithOverflow="true">
+				<reportElement mode="Opaque" x="0" y="0" width="565" height="20" isRemoveLineWhenBlank="true" backcolor="#EDEDED" uuid="8497f503-f37f-4bd5-9979-4fca69ba28ea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="59d5fdbb-8878-4cca-b971-a173cc0c5697"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$F{imprimible} && $F{imprimeFondoCeleste}]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $F{titulo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

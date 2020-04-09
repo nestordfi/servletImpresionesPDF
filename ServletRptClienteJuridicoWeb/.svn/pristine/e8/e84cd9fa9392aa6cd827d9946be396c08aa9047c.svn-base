@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2018-12-03T12:22:28 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repAnexo2ClienteJuridico" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af91d6d2-2a3e-474a-ae6e-bcbddfc60515">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<group name="Group1">
+		<groupHeader>
+			<band height="31">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="29" y="6" width="501" height="20" uuid="dc3aa556-e40e-4368-a60a-3844ce85bf45"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold='true'>Anexo 2</style>"+ "\n\n" +
+  
+"<style isBold='true'>NORMAS Y DECLARACIONES ESPECIALES RELACIONADAS CON LA LEY DE COMERCIO ELECTRÓNICO</style>.- Además de las estipulaciones contenidas en las demás cláusulas del presente contrato, El CLIENTE declara expresamente que conoce el contenido de la Ley de Comercio Electrónico así como de los Reglamentos que sobre esta materia han dictado las autoridades competentes, así como los derechos y obligaciones del BANCO y del CLIENTE normados en la Ley Orgánica de Defensa del Consumidor, por lo cual las partes desde ya se comprometen a cumplir dichas normas en todo lo que fuere aplicable respecto al presente contrato. Para mayor claridad se deja expresa constancia de lo siguiente: "+ "\n\n" +
+ 
+"Los mensajes de datos tendrán igual valor jurídico que los documentos escritos cuando aplique. Su eficacia, valoración y efectos, se someterán al cumplimento de lo establecido en la Ley de Comercio Electrónico y sus reglamentos y normativa vigente aplicable. Cuando la ley requiera u obligue que la información conste por escrito, este requisito quedará cumplido con un mensaje de datos, siempre que la información que contenga sea accesible para su posterior consulta. Cuando la ley requiera u obligue que la información sea presentada o conservada en su forma original, este requisito quedará cumplido con un mensaje de datos, si, siendo requerido conforme a la ley, puede comprobarse que ha conservado la integridad de la información a partir del momento en que se generó por primera vez en su forma definitiva, como mensaje de datos. Se considera que un mensaje de datos permanece íntegro, si se mantiene completo e inalterable su contenido, salvo algún cambio de forma, propio del proceso de comunicación, archivo o presentación. "+ "\n\n" +
+ 
+"Previo acuerdo entre las partes y cumpliendo todas las obligaciones previstas en la Ley de Comercio Electrónico y sus reglamentos, se podrán desmaterializar los documentos que por ley deban ser instrumentados físicamente. Los documentos desmaterializados deberán contener las firmas electrónicas correspondientes debidamente certificadas ante una de las entidades autorizadas y deberán ser conservadas conforme a lo establecido en la Ley de Comercio Electrónico"+ "\n\n" +
+ 
+"El BANCO y el CLIENTE se autorizan mutua y expresamente al uso o transmisión de mensajes de datos, pero única y exclusivamente respecto a las transacciones objeto del presente contrato y las que en el futuro se ponga a disposición del CLIENTE. Cualquier operación y transacción mercantil, financiera o de servicios, que se realice entre las partes de acuerdo a lo pactado en el presente contrato, con mensajes de datos, a través de redes electrónicas, se someterá a los requisitos y solemnidades establecidos en la ley y normativa aplicable y tendrá el mismo valor y los mismos efectos jurídicos que los señalados en dicha ley."+ "\n" +
+"Los contratos electrónicos podrán ser instrumentados mediante mensajes de datos. No se negará validez o fuerza obligatoria a un contrato por la sola razón de haberse utilizado en su formación uno o más mensajes de datos. El perfeccionamiento de los contratos electrónicos se someterá a los requisitos y solemnidades previstas en las leyes y se tendrá como lugar de perfeccionamiento el que acordaren las partes. Las partes acuerdan expresamente que la recepción, confirmación de recepción, o apertura del mensaje de datos, no implica aceptación del contrato electrónico, la misma que deberá realizarse expresamente por cada contrato electrónico."+ "\n\n" +
+ 
+"El CLIENTE declara que ha sido informado, clara, precisa y satisfactoriamente sobre los equipos y programas que requiere para acceder a los registros o mensajes de datos, por lo cual expresa su consentimiento para aceptar registros electrónicos o mensajes de datos. El CLIENTE, al otorgar o confirmar electrónicamente su consentimiento, deberá demostrar razonablemente que puede acceder a la información objeto de su consentimiento. Si con posterioridad a dicho consentimiento existiesen cambios de cualquier tipo, incluidos cambios en equipos, programas o procedimientos, necesarios para mantener o acceder a registros o mensajes electrónicos, de forma que exista el riesgo de que el CLIENTE no sea capaz de acceder o retener un registro electrónico o mensaje de datos sobre los que hubiera otorgado su consentimiento, el BANCO le proporcionará la información necesaria para realizar estos cambios, así como informará al CLIENTE sobre su derecho a retirar el consentimiento previamente otorgado sin la imposición de ninguna condición, costo alguno o consecuencias. "+ "\n\n" +
+ 
+"Los servicios financieros que preste el Banco y que sean aceptados voluntariamente por el Cliente con firma electrónica y/o menajes de datos quedarán sujetos a lo permitido por la normativa vigente y disposiciones de autoridad competente."+ "\n\n" +
+
+"El CLIENTE autoriza y consiente expresamente la recopilación y uso de sus datos personales, los cuales podrán ser utilizados o transferidos a los organismos de control del sistema financiero y en general a las autoridades competentes de acuerdo a lo establecido en las respectivas normas legales. Se deja constancia que, por la relación de negocios y contractual entre el BANCO y el CLIENTE, estos datos son necesarios para el mantenimiento de tales relaciones y para el cumplimiento del contrato. En caso que El CLIENTE llegase a revocar este consentimiento, el presente contrato se dará automáticamente por terminado. Esta revocatoria no tendrá en ningún caso efecto retroactivo. "+ "\n\n" +
+ 
+"La firma electrónica tendrá igual validez y se le reconocerán los mismos efectos jurídicos que a una firma manuscrita en relación con los datos consignados en documentos escritos, y será admitida como prueba en juicio. Cuando se fijare la firma electrónica en un mensaje de datos, aquella deberá enviarse en un mismo acto como parte integrante del mensaje de datos o lógicamente asociada a este. "+ "\n\n" +
+ 
+"Se presumirá legalmente que el mensaje de datos firmado electrónicamente conlleva la voluntad del emisor, quien se someterá al cumplimiento de las obligaciones contenidas, en dicho mensaje de datos, de acuerdo a lo determinado en la ley. El CLIENTE titular de la firma electrónica deberá cumplir con las obligaciones derivadas del uso de la firma electrónica de acuerdo con las normas contenidas en la Ley de Comercio Electrónico y sus Reglamentos, actuar con la debida diligencia y tomar las medidas de seguridad necesarias, para mantener la firma electrónica bajo su estricto control y evitar toda utilización no autorizada; notificar al BANCO cuando exista riesgo de que su firma sea controlada por terceros no autorizados y utilizada indebidamente, cuidando que el BANCO haya recibido efectivamente la notificación; verificar la exactitud de sus declaraciones; responder ante El BANCO por las obligaciones derivadas del uso no autorizado de su firma, cuando no hubiere obrado con la debida diligencia para impedir su utilización; notificar a la entidad de certificación de información en la que haya registrado su firma electrónica así como al BANCO los riesgos de su firma y solicitar oportunamente a la entidad de certificación de información la cancelación de los certificados; y, en general, cumplir las demás obligaciones señaladas en la Ley de Comercio Electrónico y sus reglamentos. "+ "\n\n" +
+ 
+"El CLIENTE también declara que conoce que la Ley de Comercio Electrónico dispone que, de requerirse que la información relativa a un servicio electrónico, incluido el comercio electrónico, deba constar por escrito, el uso de medios electrónicos para proporcionar o permitir el acceso a esa información, será válido si el CLIENTE ha consentido expresamente en tal uso y no ha objetado tal consentimiento y si el CLIENTE en forma previa a su consentimiento ha sido informado, a satisfacción, de forma clara y precisa sobre aquellos asuntos expresamente enumerados en dicha ley. Por lo tanto, el CLIENTE, libre y voluntariamente declara que desde ya otorga su expreso consentimiento así como que ha sido informado en forma clara y precisa sobre su derecho u opción de recibir la información en papel o por medios no electrónicos; su derecho a objetar su consentimiento en lo posterior que dará lugar a la terminación del presente contrato pudiendo el BANCO solicitar al CLIENTE el pago de la tarifa fijada por el BANCO por este concepto y que el CLIENTE declara conocer. Así mismo, el CLIENTE declara que conoce los procedimientos para retirar su consentimiento y para actualizar la información proporcionada al BANCO, así como el derecho que le asiste para que, posteriormente al consentimiento, el CLIENTE pueda obtener una copia impresa en papel de los registros electrónicos, pagando el costo de estas copias. "+ "\n\n" +
+ 
+"Por su parte el BANCO declara que, mediante el presente contrato y a través de folletos informativos, ha informado al CLIENTE respecto a todos los requisitos, condiciones y restricciones para que él pueda hacer uso de los servicios ofertados. "+ "\n\n" +
+ 
+"El CLIENTE ratifica esta declaración indicando que no tiene nada que reclamar al respecto. El CLIENTE declara su voluntad expresa para recibir los envíos periódicos de mensajes de datos que remita el BANCO con información relacionada con los Servicios objeto del presente contrato, así como de los nuevos servicios y productos que se vayan implementando, en forma individual o a través de listas de correo, voluntariamente al uso y aceptación de mensajes de datos y firmas electrónicas, en la forma prevista en el presente contrato y en la Ley de Comercio Electrónico y sus reglamentos. "+ "\n\n" +
+ 
+"Las partes aceptan expresamente que cuando se presentare como prueba una firma electrónica certificada por una entidad de certificación de información acreditada, se presumirá que esta reúne los requisitos determinados en la Ley, y que por consiguiente, los datos de la firma electrónica no han sido alterados desde su emisión y que la firma electrónica pertenece al signatario. Para mejor conocimiento del CLIENTE a continuación se transcriben algunas definiciones que constan en la Ley de Comercio Electrónico: "+ "\n\n" +
+ 
+"- Certificado de firma electrónica.- Es el mensaje de datos que certifica la vinculación de una firma electrónica con una persona determinada, a través de un proceso de comprobación que confirma su identidad. "+ "\n\n" +
+ 
+"- Firma Electrónica.- Son los datos en forma electrónica consignados en un mensaje de datos, adjuntados o lógicamente asociados al mismo, y que puedan ser utilizados para identificar al titular de la firma en relación con el mensaje de datos, e indicar que el titular de la firma aprueba y reconoce la información contenida en el mensaje de datos."+ "\n\n" +
+ 
+"- Mensaje de Datos.- Es toda información creada, generada, procesada, enviada, recibida, comunicada o archivada por medios electrónicos, que puede ser intercambiada por cualquier medio. Serán considerados como mensajes de datos, sin que esta enumeración limite su definición, los siguientes documentos electrónicos, registros electrónicos, correo electrónico, servicio Web, telegrama, telex, fax e intercambio electrónico de datos."+ "\n\n" +
+ 
+"- Red electrónica de información.- Es un conjunto de equipos y sistemas de información interconectadas electrónicamente."+ "\n\n" +
+ 
+"- Sistema de información.- Es todo dispositivo físico o lógico utilizado para crear, generar, enviar, recibir, procesar, comunicar o almacenar de cualquier forma, mensajes de datos."+ "\n\n" +
+ 
+"- Servicio Electrónico.- Es toda actividad realizada a través de redes electrónicas de información."+ "\n\n" +
+ 
+"- Comercio Electrónico.- Es toda transacción comercial realizada en parte o en su totalidad, a través de redes electrónicas de información."+ "\n\n" +
+ 
+"- Desmaterialización electrónica de documentos.- Es la transferencia de la información contenida en documentos físicos a mensajes de datos."+ "\n\n" +
+ 
+"Las partes, de común acuerdo, declaran que aplicarán las normas contenidas en la Ley de Comercio electrónico y en sus reglamentos a medida que El BANCO las ponga a disposición del CLIENTE. La utilización por parte del CLIENTE de los Servicios por un Medio (canal) Autorizado, implica la aceptación del CLIENTE de los Servicios y productos, sin que sea necesario para ello la suscripción de nuevos contratos siempre que los mismos hayan sido autorizados por autoridad competente y notificados al cliente de acuerdo a lo que determine la normativa vigente. "]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageFooter>
+		<band height="9">
+			<textField>
+				<reportElement x="32" y="0" width="35" height="9" uuid="327a6327-009b-4f8b-b66d-69a1bc2ef8c6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pag. " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="54" y="0" width="25" height="9" uuid="afc5cbff-403e-47e6-b8d5-87bddcced8e3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="0" width="144" height="9" uuid="40d8be15-39d8-4369-8119-6ef474717758">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new java.text.SimpleDateFormat("dd 'de' MMMMM 'de' yyyy",new Locale("es", "ES"))).format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

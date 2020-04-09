@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2018-11-26T14:46:21 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptBeneficiarioFinal" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="1805bf35-3a1f-4ad2-aef0-d272cc3a0866">
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="IMG_DIR" class="java.lang.String"/>
+	<parameter name="razonSocial" class="java.lang.String"/>
+	<parameter name="ruc" class="java.lang.String"/>
+	<parameter name="fechaSistema" class="java.util.Date"/>
+	<field name="repLegalesList" class="java.util.List"/>
+	<field name="beneficiariosList" class="java.util.List"/>
+	<field name="accionistasList" class="java.util.List"/>
+	<variable name="var_fecha_sistema" class="java.lang.String">
+		<variableExpression><![CDATA[new SimpleDateFormat("EEEEE dd 'de' MMMMM 'de' yyyy", new Locale("es","ES")).format(new Date())]]></variableExpression>
+		<initialValueExpression><![CDATA[new SimpleDateFormat("EEEEE dd 'de' MMMMM 'de' yyyy", new Locale("es","ES")).format(new Date())]]></initialValueExpression>
+	</variable>
+	<group name="GroupAccionistas">
+		<groupHeader>
+			<band height="40">
+				<staticText>
+					<reportElement x="10" y="3" width="250" height="16" uuid="1b9d728a-c2f4-43af-a900-2670d687bd36">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[I.	DATOS DE LOS ACCIONISTAS]]></text>
+				</staticText>
+				<subreport>
+					<reportElement positionType="Float" x="-19" y="20" width="589" height="20" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="c0830fe0-0c3b-4201-ae43-9ec21a3383dc"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{accionistasList})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subRptAccionistasBeneficiarioFinal.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupParte2">
+		<groupHeader>
+			<band height="61">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="10" y="11" width="520" height="20" uuid="3abee9a7-fdd9-49f5-9e95-e8833636890b"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Certifico que el/los beneficiarios finales de la compañía, corresponden a los descritos a continuación:"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="10" y="39" width="520" height="20" uuid="8835f863-3159-47cc-862c-390721d3e021"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold='true'>II.BENEFICIARIOS  FINALES (personas naturales que son propietarias finales del producto de una transacción o tienen el control final de un cliente y/o persona en cuyo nombre se realizar la transacción. Comprende a aquellas personas que ejercen el control efectivo sobre una persona jurídica o acuerdo legal)</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupBeneficiarios">
+		<groupHeader>
+			<band height="27">
+				<subreport>
+					<reportElement positionType="Float" x="-19" y="4" width="589" height="20" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="17270dde-89f3-4b31-8a2b-e9b34d9f9d83"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{beneficiariosList})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subRptAccBenBeneficiarioFinal.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupParte3">
+		<groupHeader>
+			<band height="29">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement positionType="Float" x="10" y="4" width="520" height="20" uuid="7f695fba-7eb8-4e04-bc21-6e343ebcd8cc"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["(*)Información Indispensable" + "\n\n" +
+"Estoy de acuerdo en notificar a Banco Internacional, de cualquier cambio en relación con la composición de la propiedad del accionista/beneficiarios finales de la sociedad/compañía." + "\n\n" +
+"<style isBold='true'>Firma Representante Legal:</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupRepLegal">
+		<groupHeader>
+			<band height="33">
+				<subreport>
+					<reportElement positionType="Float" x="-19" y="8" width="589" height="20" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="3906c3bc-7dfc-4b58-ab77-22a4f93dd8cf"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{repLegalesList})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subRptRepresentantesLegalesBeneficiarioFinal.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="142" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="380" y="0" width="151" height="40" uuid="ff07f259-1628-4df2-b36c-5b6a9631a770"/>
+				<imageExpression><![CDATA[$P{IMG_DIR}+ "logo_baninter_reporte.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="10" y="40" width="521" height="18" uuid="81e022fb-33bf-4c1b-831c-8d95dafd1b50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORMACIÓN BENEFICIARIO FINAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="66" width="210" height="16" uuid="99527274-55f1-4bc7-b48b-cd96dc7d7590">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAZÓN SOCIAL (Persona Jurídica):]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="230" y="66" width="300" height="16" uuid="fb9dbc3c-28b3-4283-8c59-b432e68d1f48">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{razonSocial}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="92" width="100" height="16" uuid="3578cbf7-92d1-480e-8c3f-de61f963e6e8"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="231" y="92" width="300" height="16" uuid="bef0ec3a-03f3-4eb6-b224-a2005ab27dc9"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ruc}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement positionType="Float" x="10" y="117" width="520" height="20" uuid="29357df5-eb6b-47e5-b5b7-25a3a09aa381"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Certifico que los principales accionistas de la compañía, corresponden a los descritos a continuación."]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="23">
+			<textField>
+				<reportElement x="310" y="0" width="220" height="20" uuid="7b275d30-7f89-4e31-bdd3-b4444d63139a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Fecha: "+  $V{var_fecha_sistema}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
