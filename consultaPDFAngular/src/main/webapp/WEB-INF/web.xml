@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ms="urn:schemas-microsoft-com:xslt" xmlns:js="urn:the-xml-files:xslt">
+	<display-name>ConsultaBastanteoWar</display-name>
+	<servlet>
+		<servlet-name>javax.ws.rs.core.Application</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>javax.ws.rs.core.Application</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<!-- Filtro para cors -->
+		<filter-name>CORS</filter-name>
+		<filter-class>ec.com.bancoInternacional.ConsultaBastanteo.ws.CORSFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>CORS</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<env-entry>
+		<!-- Direccion de la pagina de login -->
+		<env-entry-name>app.desa.usr</env-entry-name>
+		<env-entry-value>OPEDESA3</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
+	<env-entry>
+		<!-- Direccion a la que la app redirecciona si el usuatrio tiene sesion 
+			valida -->
+		<env-entry-name>app.dir.ingreso</env-entry-name>
+		<env-entry-value>/consulta-bastanteo</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
+	<env-entry>
+		<!-- Direccion de la pagina de login -->
+		<env-entry-name>app.dir.login</env-entry-name>
+		<env-entry-value>/SeguridadBI/login_input.action</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
+	<env-entry>
+		<!-- Direccion url de la aplicacion que genera el pdf formulario de vinculacion -->
+		<env-entry-name>servlet.clientejuridico.gwt</env-entry-name>
+		<env-entry-value>http://10.0.72.234:9080/ServletRptClienteJuridicoWeb</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
+	<env-entry>
+		<!-- Dirección URL a aplicación de Cuentas -->
+		<env-entry-name>clientes.cuentas</env-entry-name>
+		<env-entry-value>http://172.16.72.100:9080/cuentasBIgwt</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
+	<env-entry>
+		<!-- Direccion url aplicación Clientes Naturales -->
+		<env-entry-name>clientes.natural</env-entry-name>
+		<env-entry-value>http://172.16.72.100:9080/baninter-clientes-web</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
+	<env-entry>
+		<!-- Direccion url aplicación Informacion Tributaria Y Beneficiario Final -->
+		<env-entry-name>informacion.tributaria.beneficiario.final</env-entry-name>
+		<env-entry-value>http://172.16.73.43/IntCRS/Form_Juridico.aspx</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
+	<env-entry>
+		<!-- Direccion url aplicación checklist -->
+		<env-entry-name>checklist</env-entry-name>
+		<env-entry-value>http://10.0.72.167:9080/checklist/pages/home.jsf</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
+	<env-entry>
+		<!-- Tiempo en segundos para abrir alerta de inactividad, debe ser siempre 
+			menor a session-timeout -->
+		<env-entry-name>sessionTimeOutMinutes</env-entry-name>
+		<env-entry-value>20</env-entry-value>
+		<env-entry-type>java.lang.Integer</env-entry-type>
+	</env-entry>
+
+</web-app>
